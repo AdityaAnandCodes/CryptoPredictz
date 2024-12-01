@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";  // Import Link for routing
+import { Link } from "react-router-dom"; // Import Link for routing
 
 const Navbar = () => {
   return (
@@ -6,7 +6,6 @@ const Navbar = () => {
       {/* Container for the Navbar */}
       <div className="flex justify-center gap-6 items-center bg-gray-100 rounded-xl px-4 py-2 text-black">
         {/* Casino Button */}
-        
 
         {/* Sports Button */}
         <Link to="/sports" className="flex flex-col items-center text-center">
@@ -33,7 +32,6 @@ const Navbar = () => {
         </Link>
 
         {/* Account Button */}
-        
 
         {/* Rewards Button */}
         <Link to="/reward" className="flex flex-col items-center text-center">
@@ -56,12 +54,24 @@ const Navbar = () => {
           <span className="text-xs mt-1">Rewards</span>
         </Link>
         <Link to="/" className="flex flex-col items-center text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          <span className="text-xs mt-1">Home</span>
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span className="text-xs mt-1">Home</span> */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide lucide-house"
+          >
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          </svg>
         </Link>
-
-
-        
 
         {/* Affiliate Button */}
         <Link to="/affiliate" className="flex flex-col items-center text-center">
