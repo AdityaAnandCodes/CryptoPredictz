@@ -16,7 +16,8 @@ function App() {
     <Router>
       <main className="bg-gradient-to-b from-black via-neutral-950 to-gray-950 text-white min-h-screen relative">
         <Routes>
-          <Route path="/" element={<AuthenticationPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/authentication" element = {<AuthenticationPage />} />
           <Route path="/account" element={<Accounts />} />
           <Route path="/reward" element={<Rewards />} />
           <Route path="/affiliate" element ={<InviteFriends />} />
