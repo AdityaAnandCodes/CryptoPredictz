@@ -158,7 +158,6 @@ export const BettingCardDummy = [
 
 export default BettingCardDummy;
 
-
 export const accountData = {
   user: {
     name: "Aptos User",
@@ -180,3 +179,31 @@ export const accountData = {
     { id: 3, label: "Log Out", action: () => console.log("Log Out") },
   ],
 };
+
+export const sportsList = [
+  {
+    id: 1,
+    name: "Football",
+    image: "https://via.placeholder.com/32",
+  },
+  {
+    id: 2,
+    name: "Basketball",
+    image: "https://via.placeholder.com/32",
+  },
+  {
+    id: 3,
+    name: "Baseball",
+    image: "https://via.placeholder.com/32",
+  },
+  {
+    id: 4,
+    name: "Tennis",
+    image: "https://via.placeholder.com/32",
+  },
+  {
+    id: 5,
+    name: "Cricket",
+    image: "https://via.placeholder.com/32",
+  },
+];
