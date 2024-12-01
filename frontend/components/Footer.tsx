@@ -112,7 +112,7 @@ const Footer = () => {
       {/* Bottom Section: Disclaimer */}
       <div className="mt-6 border-t border-gray-700 pt-4 text-sm text-center">
         <p className="mb-2">
-          © {new Date().getFullYear()} Aptos Arena. All rights reserved.
+          © {new Date().getFullYear()} CryptoBetz. All rights reserved.
         </p>
         <p>
           Betting involves risks. Please play responsibly. Visit{" "}

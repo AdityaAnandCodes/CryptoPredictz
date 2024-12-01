@@ -5,11 +5,13 @@ import Features from "@/components/Features";
 
 import UpcomingMatches from "@/components/UpcomingMatches";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 
 const Home = () => {
   return (
     <main className="bg-gradient-to-b from-black via-black to-gray-950 text-white min-h-screen relative">
       <Header />
+      <Hero />
       <Navbar />
       <Features />
       <UpcomingMatches />
