@@ -13,8 +13,8 @@ interface BettingCardProps {
 export default function BettingCard({ title, time, team1, team1Image, team2, team2Image, odds }: BettingCardProps) {
   return (
     <>
-      <Card className="min-w-[250px] bg-zinc-950 border border-zinc-800 rounded-xl shadow-md cursor-pointer">
-        <CardHeader className="p-3 bg-zinc-900 rounded-t-md text-left">
+      <Card className="min-w-[250px] bg-sky-100 border border-zinc-800 rounded-2xl shadow-md cursor-pointer">
+        <CardHeader className="p-3 bg-sky-100 rounded-t-2xl text-left">
           <p className="text-xs font-medium text-gray-400">{title}</p>
           <p className="text-xs text-gray-500">{time}</p>
         </CardHeader>
@@ -22,11 +22,11 @@ export default function BettingCard({ title, time, team1, team1Image, team2, tea
           <div className="flex flex-col items-start mb-3 gap-2">
             <div className="flex items-center space-x-4">
               <img src={team1Image} alt={team1} className="h-6 w-6 rounded-full" />
-              <span className="text-sm font-semibold text-white">{team1}</span>
+              <span className="text-sm font-semibold text-slate-800">{team1}</span>
             </div>
             <div className="flex items-center space-x-4">
               <img src={team2Image} alt={team2} className="h-6 w-6 rounded-full" />
-              <span className="text-sm font-semibold text-white">{team2}</span>
+              <span className="text-sm font-semibold text-slate-800">{team2}</span>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-2 text-center">
