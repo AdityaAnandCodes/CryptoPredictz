@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import BettingModal from "./BettingModal"; // Import the modal component
 
 interface BettingCardProps {
   title: string;
@@ -11,9 +13,16 @@ interface BettingCardProps {
 }
 
 export default function BettingCard({ title, time, team1, team1Image, team2, team2Image, odds }: BettingCardProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <Card className="min-w-[250px] bg-sky-100 border border-zinc-800 rounded-2xl shadow-md cursor-pointer">
+      <Card
+        className="min-w-[250px] bg-sky-100 border border-zinc-800 rounded-2xl shadow-md cursor-pointer"
+        onClick={openModal}
+      >
         <CardHeader className="p-3 bg-sky-100 rounded-t-2xl text-left">
           <p className="text-xs font-medium text-gray-400">{title}</p>
           <p className="text-xs text-gray-500">{time}</p>
@@ -45,6 +54,17 @@ export default function BettingCard({ title, time, team1, team1Image, team2, tea
           </div>
         </CardContent>
       </Card>
+      <BettingModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={title}
+        time={time}
+        team1={team1}
+        team1Image={team1Image}
+        team2={team2}
+        team2Image={team2Image}
+        odds={odds}
+      />
     </>
   );
 }
