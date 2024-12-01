@@ -4,6 +4,7 @@ import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 
 import UpcomingMatches from "@/components/UpcomingMatches";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Features />
       <UpcomingMatches />
       <Faq />
+      <Footer />
     </main>
   );
 };
