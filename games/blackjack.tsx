@@ -190,10 +190,11 @@ const BlackjackGame: React.FC = () => {
   return (
     <>
       <NavBar />
-      <div className="sm:hidden">
+      <div className="sm:hidden flex justify-between items-center p-4">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
+          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
         </Link>
+        <button className="pb-2 font-semibold">Logout</button>
       </div>
       <div className="min-h-screen text-white flex flex-col items-center justify-center p-4">
         <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">

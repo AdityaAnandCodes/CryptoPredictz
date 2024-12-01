@@ -1,10 +1,17 @@
 import Navbar from '@/components/Navbar';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const InviteFriends = () => {
   return (
     <>
       <Navbar />
+      <div className="sm:hidden flex justify-between items-center p-4">
+        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
+          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
+        </Link>
+        <button className="pb-2 font-semibold text-white">Logout</button>
+      </div>
       <div className="text-white min-h-screen flex flex-col items-center pt-24 pb-12 max-sm:pt-4 px-4">
         {/* Hero Section */}
         <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between  bg-[url('/BlueGradient.png')] rounded-lg shadow-xl p-12 max-sm:p-4 mb-10 relative overflow-hidden">
