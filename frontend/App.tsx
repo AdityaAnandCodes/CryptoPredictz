@@ -13,7 +13,7 @@ function App() {
 
   return connected ? (
     <Router>
-      <main className="bg-gradient-to-b from-black via-black to-gray-950 text-white min-h-screen relative">
+      <main className="bg-gradient-to-b from-black via-neutral-950 to-gray-950 text-white min-h-screen relative">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Accounts />} />

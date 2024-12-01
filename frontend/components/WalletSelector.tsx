@@ -38,9 +38,9 @@ export function WalletSelector() {
   }
 
   return connected ? (
-    <DropdownMenu>
+    <DropdownMenu >
       <DropdownMenuTrigger asChild>
-        <Button>{account?.ansName || truncateAddress(account?.address) || "Unknown"}</Button>
+        <Button className="bg-purple-700 hover:bg-purple-800 transition-all duration-200 font-semibold texl-base max-sm:w-fit max-sm:text-xs">{account?.ansName || truncateAddress(account?.address) || "Unknown"}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onSelect={copyAddress} className="gap-2">
@@ -52,10 +52,10 @@ export function WalletSelector() {
       </DropdownMenuContent>
     </DropdownMenu>
   ) : (
-    <WalletItem wallet={mizuWallet} className="flex items-center justify-between px-4 py-3 gap-4 border rounded-md">
-      <div className="flex items-center gap-4">
-        <WalletItem.Icon className="h-6 w-6" />
-        <WalletItem.Name className="text-base font-normal" />
+    <WalletItem wallet={mizuWallet} className="flex items-center justify-between px-6 py-6 gap-8 border rounded-md z-10">
+      <div className="flex items-center gap-2">
+        <WalletItem.Icon className="h-8 w-8 rounded" />
+        <WalletItem.Name className="text-base font-semibold" />
       </div>
       {isInstallRequired(mizuWallet) ? (
         <Button size="sm" variant="ghost" asChild>
@@ -63,7 +63,13 @@ export function WalletSelector() {
         </Button>
       ) : (
         <WalletItem.ConnectButton asChild>
-          <Button size="sm">Connect</Button>
+        <Button
+  className="bg-purple-700 hover:bg-purple-800 shadow shadow-purple-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-semibold text-md "
+  size="sm"
+>
+  Connect
+</Button>
+
         </WalletItem.ConnectButton>
       )}
     </WalletItem>

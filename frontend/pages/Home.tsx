@@ -9,7 +9,7 @@ import Hero from "@/components/Hero";
 
 const Home = () => {
   return (
-    <main className="bg-gradient-to-b from-black via-black to-gray-950 text-white min-h-screen relative">
+    <main className="text-white min-h-screen relative">
       <Header />
       <Hero />
       <Navbar />
