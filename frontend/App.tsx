@@ -3,6 +3,7 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Accounts from "./pages/Accounts";
+import Rewards from "./pages/Rewards";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Accounts />} />
+          <Route path="/reward" element={<Rewards />} />
         </Routes>
       </main>
     </Router>
