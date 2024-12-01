@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import NavBar from "../frontend/components/Navbar";
 
 // Type Definitions
 interface Card {
@@ -186,71 +187,74 @@ const BlackjackGame: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">
-        <div className="text-center mb-4">
-          <h1 className="text-3xl font-bold">Blackjack</h1>
-          <p>
-            Balance: ${balance} | Current Bet: ${currentBet}
-          </p>
-          <p className="text-yellow-500 font-semibold">{message}</p>
-        </div>
-
-        {/* Dealer Hand */}
-        <div className="flex justify-center mb-4">
-          <div className="flex flex-wrap justify-center gap-2">
-            {dealerHand.map((card, index) => renderCard(card, index))}
+    <>
+      <NavBar />
+      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+        <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">
+          <div className="text-center mb-4">
+            <h1 className="text-3xl font-bold">Blackjack</h1>
+            <p>
+              Balance: ${balance} | Current Bet: ${currentBet}
+            </p>
+            <p className="text-yellow-500 font-semibold">{message}</p>
           </div>
-        </div>
 
-        {/* Player Hand */}
-        <div className="flex justify-center mb-4">
-          <div className="flex flex-wrap justify-center gap-2">
-            {playerHand.map((card, index) => renderCard(card, index))}
+          {/* Dealer Hand */}
+          <div className="flex justify-center mb-4">
+            <div className="flex flex-wrap justify-center gap-2">
+              {dealerHand.map((card, index) => renderCard(card, index))}
+            </div>
           </div>
-        </div>
 
-        {/* Game Controls */}
-        <div className="flex justify-center space-x-4">
-          {gameStatus === "betting" && (
-            <>
-              <button
-                onClick={() => setCurrentBet(Math.max(10, currentBet - 10))}
-                className=" hover:bg-black bg-zinc-800 text-white px-4 py-2 rounded"
-              >
-                <ChevronLeft />
-              </button>
-              <button onClick={placeBet} className="bg-zinc-800 hover:bg-black text-white px-6 py-2 rounded">
-                ${currentBet}
-              </button>
-              <button
-                onClick={() => setCurrentBet(Math.min(balance, currentBet + 10))}
-                className="bg-zinc-800 hover:bg-black text-white px-4 py-2 rounded"
-              >
-                <ChevronRight />
-              </button>
-            </>
-          )}
+          {/* Player Hand */}
+          <div className="flex justify-center mb-4">
+            <div className="flex flex-wrap justify-center gap-2">
+              {playerHand.map((card, index) => renderCard(card, index))}
+            </div>
+          </div>
 
-          {gameStatus === "playing" && (
-            <>
-              <button onClick={hit} className="bg-gray-400 hover:bg-gray-500 text-white px-6 py-2 rounded">
-                Hit
-              </button>
-              <button onClick={stand} className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded">
-                Stand
-              </button>
-            </>
-          )}
+          {/* Game Controls */}
+          <div className="flex justify-center space-x-4">
+            {gameStatus === "betting" && (
+              <>
+                <button
+                  onClick={() => setCurrentBet(Math.max(10, currentBet - 10))}
+                  className=" hover:bg-black bg-zinc-800 text-white px-4 py-2 rounded"
+                >
+                  <ChevronLeft />
+                </button>
+                <button onClick={placeBet} className="bg-zinc-800 hover:bg-black text-white px-6 py-2 rounded">
+                  ${currentBet}
+                </button>
+                <button
+                  onClick={() => setCurrentBet(Math.min(balance, currentBet + 10))}
+                  className="bg-zinc-800 hover:bg-black text-white px-4 py-2 rounded"
+                >
+                  <ChevronRight />
+                </button>
+              </>
+            )}
 
-          {gameStatus === "gameOver" && (
-            <button onClick={resetGame} className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded">
-              Play Again
-            </button>
-          )}
+            {gameStatus === "playing" && (
+              <>
+                <button onClick={hit} className="bg-gray-400 hover:bg-gray-500 text-white px-6 py-2 rounded">
+                  Hit
+                </button>
+                <button onClick={stand} className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded">
+                  Stand
+                </button>
+              </>
+            )}
+
+            {gameStatus === "gameOver" && (
+              <button onClick={resetGame} className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded">
+                Play Again
+              </button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
