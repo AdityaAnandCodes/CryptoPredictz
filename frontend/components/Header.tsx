@@ -25,16 +25,14 @@ export function Header() {
 
   return connected ? (
     <div className="flex items-center justify-between px-4 py-2 max-w-screen-xl mx-auto w-full">
-      <h1 className="display max-sm:text-lg">Aptos Arena</h1>
+      <h1 className="display max-sm:text-lg">CryptoBetz</h1>
       <div className="flex max-sm:scale-70 items-center flex-wrap">
         <WalletSelector />
       </div>
     </div>
   ) : (
     <section className="min-h-screen w-full relative overflow-hidden bg-gradient-to-b from-black via-black to-gray-950">
-      <div className="text-4xl font-bold p-4 px-8 absolute text-white z-10">
-        Aptos Arena
-      </div>
+      <div className="text-4xl font-bold p-4 px-8 absolute text-white z-10">Aptos Arena</div>
       <div className="flex h-screen items-center justify-center flex-wrap z-10">
         <WalletSelector />
       </div>
@@ -45,8 +43,8 @@ export function Header() {
           key={index}
           className="ball rounded-full bg-blue-950 opacity-50 absolute"
           style={{
-            width : `${Math.random() * 20 + 50}px`,
-            height : `${Math.random() * 20 + 50}px`,
+            width: `${Math.random() * 20 + 50}px`,
+            height: `${Math.random() * 20 + 50}px`,
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
             filter: "blur(12px)",
