@@ -63,13 +63,13 @@ const Rewards = () => {
         Log in Daily and Earn Rewards
       </div>
       <div className="text-lg max-sm:text-base px-5 font-semibold text-gray-100">
-        Exciting Rewards
+        Earn Exciting Rewards
       </div>
       <div className="bg-green-700 ml-5 max-sm:text-sm text-base bg-opacity-50 rounded-lg w-fit p-2 px-4">
-        Earn Rewards
+        Get Rewards Here
       </div>
     </div>
-    <img src="/rb_5334.png" className="absolute bottom-2 right-2 max-sm:w-40 max-sm:h-40 h-60 w-60" />
+    <img src="/rb_5334.png" className="absolute bottom-2 right-2 max-sm:right-0  max-sm:w-40 max-sm:h-40 h-60 w-60" />
   </div>
 
   {/* First row: Keep Going Section (spans 1 column) */}
