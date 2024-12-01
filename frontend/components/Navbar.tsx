@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { OktoContextType, useOkto } from "okto-sdk-react";
 
 const Navbar = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
+  const { showWidgetModal } = useOkto() as OktoContextType;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,8 +115,8 @@ const Navbar = () => {
             Affiliate
           </Link>
         </div>
-
-        <Link to="/account" className="flex items-center text-lg hover:text-stone-600">
+        <button onClick={showWidgetModal} className="flex items-center text-lg hover:text-stone-600">
+          {/* <Link to="/account" className="flex items-center text-lg hover:text-stone-600"> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -132,7 +134,8 @@ const Navbar = () => {
             <circle cx="12" cy="12" r="10" />
           </svg>
           Account
-        </Link>
+          {/* </Link> */}
+        </button>
       </nav>
 
       {/* Bottom Navbar for small devices */}
@@ -220,7 +223,8 @@ const Navbar = () => {
             </svg>
             <span className="text-xs mt-1">Affiliate</span>
           </Link>
-          <Link to="/account" className="flex flex-col items-center text-center text-black">
+          <button onClick={showWidgetModal} className="flex flex-col items-center text-center text-black">
+            {/* <Link to="/account" className="flex flex-col items-center text-center text-black"> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -238,7 +242,8 @@ const Navbar = () => {
               <circle cx="12" cy="12" r="10" />
             </svg>
             <span className="text-xs mt-1">Account</span>
-          </Link>
+            {/* </Link> */}
+          </button>
         </div>
       </div>
     </>
