@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { WalletSelector } from "@/components/WalletSelector";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { gsap } from "gsap";
