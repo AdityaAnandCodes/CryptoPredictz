@@ -18,10 +18,13 @@ interface LiveMatchesProps {
 }
 
 const LiveMatches: React.FC<LiveMatchesProps> = ({ selectedSport }) => {
-  // Convert BettingCardDummy object to an array and filter based on selected sport
-  const filteredMatches = Object.values(BettingCardDummy)
-    .flat() // Flatten the arrays into one
-    .filter((match: Match) => match.game.toLowerCase().includes(selectedSport.toLowerCase()));
+  // If the selected sport is "All Matches", show all matches without filtering
+  const filteredMatches =
+    selectedSport === "All Matches"
+      ? Object.values(BettingCardDummy).flat()
+      : Object.values(BettingCardDummy)
+          .flat()
+          .filter((match: Match) => match.game.toLowerCase().includes(selectedSport.toLowerCase()));
 
   return (
     <div className="text-white p-4 pt-2">
