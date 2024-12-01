@@ -6,6 +6,14 @@ const SportsList = ({ onSelectSport }: { onSelectSport: React.Dispatch<React.Set
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">Sports</h2>
       <ul className="space-y-3">
+        {/* Add "All Matches" as an option */}
+        <li
+          className="flex items-center gap-4 py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 cursor-pointer"
+          onClick={() => onSelectSport("All Matches")}
+        >
+          <span className="text-lg font-medium text-white">All Matches</span>
+        </li>
+
         {sportsList.map((sport) => (
           <li
             key={sport.id}
