@@ -24,6 +24,7 @@ const Games = () => {
 
         {/* Slot Machine Game Section */}
         <div className="p-4 pb-10 rounded-xl bg-white bg-opacity-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <a href="/slotmachine">
         <div className="relative slotMachine w-64 h-64  rounded-lg shadow-lg overflow-hidden">
           <a href="/slotmachine" className="absolute inset-0 flex justify-center items-center text-white text-2xl font-bold">
             <div className="text-center p-4"></div>
@@ -31,6 +32,7 @@ const Games = () => {
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
+        </a>
         </div>
       </div>
     </section>
