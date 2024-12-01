@@ -4,6 +4,7 @@ import UpcomingMatches from "@/components/UpcomingMatches";
 import LiveMatches from "@/components/LiveMatches";
 import Navbar from "@/components/Navbar";
 import { Link } from "react-router-dom";
+import { Copy } from "lucide-react";
 
 const Sports = () => {
   const [selectedSport, setSelectedSport] = useState<string>("All Matches");
@@ -17,7 +18,12 @@ const Sports = () => {
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
           <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
         </Link>
-        <button className="pb-2 font-semibold">Logout</button>
+        <div className="flex justify-center items-center gap-2 " >
+           <button className="text-sm bg-white text-black transition-all font-light flex items-center justify-center gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
+        <button className="pb-2 font-semibold text-sm" onClick={logOut}>
+          Logout
+        </button>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 py-4">
         {/* Sidebar or aside */}

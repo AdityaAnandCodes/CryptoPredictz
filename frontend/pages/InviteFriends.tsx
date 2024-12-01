@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Copy } from "lucide-react";
 
 const InviteFriends = () => {
   return (
@@ -10,7 +11,12 @@ const InviteFriends = () => {
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
           <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
         </Link>
-        <button className="pb-2 font-semibold text-white">Logout</button>
+        <div className="flex justify-center items-center gap-2 " >
+           <button className="text-sm bg-white text-black transition-all font-light flex items-center justify-center gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
+        <button className="pb-2 font-semibold text-sm" onClick={logOut}>
+          Logout
+        </button>
+        </div>
       </div>
       <div className="text-white min-h-screen flex flex-col items-center pt-24 pb-12 max-sm:pt-4 px-4">
         {/* Hero Section */}

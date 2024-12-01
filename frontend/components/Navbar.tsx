@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { OktoContextType, useOkto } from "okto-sdk-react";
+import { Copy } from "lucide-react";
 
 const Navbar = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
@@ -128,6 +129,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-center gap-6">
+          <button className=" hover:bg-white hover:text-black transition-all text-white font-light flex gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
           <button className="font-base hover:text-stone-200" onClick={logOut}>
             Logout
           </button>
