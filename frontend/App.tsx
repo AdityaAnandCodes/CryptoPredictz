@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Accounts from "./pages/Accounts";
 import Rewards from "./pages/Rewards";
+import InviteFriends from "./pages/InviteFriends";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Accounts />} />
           <Route path="/reward" element={<Rewards />} />
+          <Route path="/affiliate" element ={<InviteFriends />} />
         </Routes>
       </main>
     </Router>
