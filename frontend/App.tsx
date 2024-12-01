@@ -12,7 +12,7 @@ import AuthenticationPage from "./pages/AuthenticationPage";
 function App() {
   const { connected } = useWallet();
 
-  return connected ? (
+  return (
     <Router>
       <main className="bg-gradient-to-b from-black via-neutral-950 to-gray-950 text-white min-h-screen relative">
         <Routes>
@@ -25,11 +25,7 @@ function App() {
         </Routes>
       </main>
     </Router>
-  ) : (
-    <main className="bg-neutral-900 text-white min-h-screen overflow-hidden">
-      <Header />
-    </main>
-  );
+  ) 
 }
 
 export default App;

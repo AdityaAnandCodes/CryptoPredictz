@@ -8,7 +8,6 @@ import Hero from "@/components/Hero";
 const Home = () => {
   return (
     <main className="text-white min-h-screen relative">
-      <Header />
       <Hero />
       <Navbar />
       <Features />
