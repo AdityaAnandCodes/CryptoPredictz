@@ -12,7 +12,6 @@ const Home = () => {
       <Navbar />
 
       <Features />
-      <Games />
       <Faq />
       <Footer />
     </main>
