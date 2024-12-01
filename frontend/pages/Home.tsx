@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import Navbar from "@/components/Navbar";
+import Faq from "@/components/Faq";
 
 import UpcomingMatches from "@/components/UpcomingMatches";
 
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Navbar />
       <UpcomingMatches />
+      <Faq />
     </main>
   );
 };
