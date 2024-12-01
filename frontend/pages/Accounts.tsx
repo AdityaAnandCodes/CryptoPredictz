@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import { accountData } from "@/constants";
-
+import { OktoContextType, useOkto } from "okto-sdk-react";
 const Accounts = () => {
   const { user, balances, transactions, settings } = accountData;
-
+  const { logOut } = useOkto() as OktoContextType;
   return (
     <>
       <Navbar />
@@ -53,13 +53,8 @@ const Accounts = () => {
                   <p className="text-sm text-gray-400">{transaction.type}</p>
                   <p className="text-sm text-gray-400">{transaction.date}</p>
                 </div>
-                <p
-                  className={`text-xl font-bold ${
-                    transaction.isPositive ? "text-green-400" : "text-red-400"
-                  }`}
-                >
-                  {transaction.isPositive ? "+" : ""}
-                  ${transaction.amount.toFixed(2)}
+                <p className={`text-xl font-bold ${transaction.isPositive ? "text-green-400" : "text-red-400"}`}>
+                  {transaction.isPositive ? "+" : ""}${transaction.amount.toFixed(2)}
                 </p>
               </div>
             ))}
@@ -78,7 +73,8 @@ const Accounts = () => {
             {settings.map((setting) => (
               <div key={setting.id} className="bg-gray-900 p-4 rounded-lg">
                 <button
-                  onClick={setting.action}
+                  // onClick={setting.action}
+                  onClick={setting.label === "Log Out" ? logOut : setting.action}
                   className={`w-full py-3 text-white ${
                     setting.label === "Log Out" ? "bg-red-600 hover:bg-red-700" : "bg-gray-700 hover:bg-gray-600"
                   } rounded-lg`}
