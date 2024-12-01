@@ -140,9 +140,10 @@ const Navbar = () => {
 
       {/* Bottom Navbar for small devices */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 flex justify-around md:hidden bg-gray-100 shadow-lg transition-all ${isAtBottom ? "hidden" : "block"}`}
+        className={`fixed bottom-0 left-0 right-0 p-2 z-50 flex justify-around md:hidden  shadow-lg transition-all ${isAtBottom ? "hidden" : "block"}`}
       >
-        <div className="flex justify-around w-full max-w-md px-4 py-2">
+        <div className="bg-gray-100 flex gap-4 rounded-xl">
+        <div className="flex justify-around gap-3 w-full max-w-md px-4 py-2">
           <Link to="/" className="flex flex-col items-center text-center text-black">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -244,6 +245,7 @@ const Navbar = () => {
             <span className="text-xs mt-1">Account</span>
             {/* </Link> */}
           </button>
+        </div>
         </div>
       </div>
     </>
