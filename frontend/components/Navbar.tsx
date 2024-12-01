@@ -5,17 +5,18 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar for larger devices */}
-      <nav className="w-full z-20 top-0 sticky flex items-center text-stone-500 justify-between px-5 py-3 bg-zinc-900 hidden md:flex">
+
+      <nav className="w-full z-50 top-0 sticky items-center text-stone-500 justify-between px-5 py-3 bg-zinc-900 hidden md:flex">
         {/* Logo */}
         <div>
-          <Link to="/" className="text-white text-2xl font-semibold hover:text-gray-200">
+          <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
             CryptoBetz
           </Link>
         </div>
 
         {/* Center Navigation Links */}
         <div className="flex items-center gap-6">
-          <Link to="/" className="flex items-center text-lg hover:text-gray-200">
+          <Link to="/" className="flex items-center text-lg hover:text-stone-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -33,7 +34,7 @@ const Navbar = () => {
             </svg>
             Home
           </Link>
-          <Link to="/sports" className="flex items-center text-lg hover:text-gray-200">
+          <Link to="/sports" className="flex items-center text-lg hover:text-stone-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -55,7 +56,7 @@ const Navbar = () => {
             </svg>
             Sports
           </Link>
-          <Link to="/reward" className="flex items-center text-lg hover:text-gray-200">
+          <Link to="/reward" className="flex items-center text-lg hover:text-stone-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -74,7 +75,7 @@ const Navbar = () => {
             </svg>
             Rewards
           </Link>
-          <Link to="/affiliate" className="flex items-center text-lg hover:text-gray-200">
+          <Link to="/affiliate" className="flex items-center text-lg hover:text-stone-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -97,7 +98,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <Link to="/account" className="flex items-center text-lg hover:text-gray-200">
+        <Link to="/account" className="flex items-center text-lg hover:text-stone-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
