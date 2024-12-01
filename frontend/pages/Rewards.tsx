@@ -50,10 +50,11 @@ const Rewards = () => {
   return (
     <section className=" min-h-dvh text-white max-sm:pb-44">
       <Navbar />
-      <div className="sm:hidden">
+      <div className="sm:hidden flex justify-between items-center p-4">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
+          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
         </Link>
+        <button className="pb-2 font-semibold">Logout</button>
       </div>
       <div className="w-full max-h-dvh  mt-12 py-24 max-sm:mt-0 max-sm:mb-20 px-4 max-sm:py-4 max-sm:px-4 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl shadow-lg">
   {/* First row: Hero Block (spans 2 columns) */}

@@ -41,10 +41,11 @@ const SlotMachine = () => {
   return (
     <>
     <Navbar />
-    <div className="sm:hidden">
+    <div className="sm:hidden flex justify-between items-center p-4">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
+          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
         </Link>
+        <button className="pb-2 font-semibold text-white">Logout</button>
       </div>
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
       <h1 className="text-4xl font-bold mb-4">🎰 Slot Machine 🎰</h1>
