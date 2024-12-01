@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Accounts from "./pages/Accounts";
 import Rewards from "./pages/Rewards";
 import InviteFriends from "./pages/InviteFriends";
+import Sports from "./pages/Sports";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/account" element={<Accounts />} />
           <Route path="/reward" element={<Rewards />} />
           <Route path="/affiliate" element ={<InviteFriends />} />
+          <Route path = "/sports" element = {<Sports />} />
         </Routes>
       </main>
     </Router>
