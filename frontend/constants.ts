@@ -157,3 +157,26 @@ export const BettingCardDummy = [
 ];
 
 export default BettingCardDummy;
+
+
+export const accountData = {
+  user: {
+    name: "Aptos User",
+    username: "@aptosuser",
+    profileInitial: "A",
+  },
+  balances: {
+    accountBalance: 1245.67,
+    bonusBalance: 320.0,
+  },
+  transactions: [
+    { id: 1, type: "Deposit", date: "Nov 20, 2024", amount: 500.0, isPositive: true },
+    { id: 2, type: "Bet Winnings", date: "Nov 18, 2024", amount: 150.0, isPositive: true },
+    { id: 3, type: "Bet Loss", date: "Nov 15, 2024", amount: -100.0, isPositive: false },
+  ],
+  settings: [
+    { id: 1, label: "Change Password", action: () => console.log("Change Password") },
+    { id: 2, label: "Update Profile", action: () => console.log("Update Profile") },
+    { id: 3, label: "Log Out", action: () => console.log("Log Out") },
+  ],
+};
