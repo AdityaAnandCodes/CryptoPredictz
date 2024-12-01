@@ -1,12 +1,28 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Ensure the calculation checks for the correct value
+      const isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1; // -1 to allow for precision
+      setIsAtBottom(isBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       {/* Navbar for larger devices */}
 
-      <nav className="w-full z-50 top-0 sticky items-center text-stone-500 justify-between px-5 py-3 bg-zinc-900 hidden md:flex">
+      <nav className="fixed top-0 left-0 right-0 z-50 w-full items-center text-stone-500 justify-between px-5 py-3 bg-zinc-900 hidden md:flex">
         {/* Logo */}
         <div>
           <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
@@ -120,7 +136,9 @@ const Navbar = () => {
       </nav>
 
       {/* Bottom Navbar for small devices */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-around md:hidden bg-gray-100 shadow-lg">
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 flex justify-around md:hidden bg-gray-100 shadow-lg transition-all ${isAtBottom ? "hidden" : "block"}`}
+      >
         <div className="flex justify-around w-full max-w-md px-4 py-2">
           <Link to="/" className="flex flex-col items-center text-center text-black">
             <svg

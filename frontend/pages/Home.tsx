@@ -10,8 +10,6 @@ const Home = () => {
   return (
     <main className="text-white min-h-screen relative">
       <Navbar />
-
-      {/* Logo visible only on phones and smaller devices */}
       <div className="sm:hidden">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
           <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />

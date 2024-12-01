@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="min-h-fit p-4">
+    <div className="min-h-fit p-4 mt-14 max-sm:mt-0">
       <div className="flex md:space-x-4 space-x-6 md:overflow-visible overflow-x-auto scrollbar-hide">
         {/* Block 1 */}
         <div className="flex-shrink-0 h-60 hero-1 rounded-lg shadow-lg flex items-center justify-between p-4 text-white text-lg font-bold md:flex-1 w-[330px] relative overflow-hidden">
