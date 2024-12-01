@@ -48,7 +48,7 @@ const Rewards = () => {
   }, []);
 
   return (
-    <section className=" min-h-dvh max-sm:pb-44">
+    <section className=" min-h-dvh text-white max-sm:pb-44">
       <Navbar />
       <div className="sm:hidden">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
@@ -85,7 +85,7 @@ const Rewards = () => {
         </button>
       </div>
     ) : (
-      <div className="bg-gray-900 p-6 rounded-lg text-center">
+      <div className="bg-gray-900 flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <h3 className="text-lg font-semibold mb-2">Keep Going!</h3>
         <p className="text-lg text-gray-300">
           Log in for 7 consecutive days to earn a reward!
