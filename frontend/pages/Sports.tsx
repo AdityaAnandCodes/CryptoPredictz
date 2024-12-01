@@ -4,9 +4,11 @@ import UpcomingMatches from "@/components/UpcomingMatches";
 import LiveMatches from "@/components/LiveMatches";
 import Navbar from "@/components/Navbar";
 import { Link } from "react-router-dom";
+import { OktoContextType, useOkto } from "okto-sdk-react";
 import { Copy } from "lucide-react";
 
 const Sports = () => {
+  const { logOut } = useOkto() as OktoContextType;
   const [selectedSport, setSelectedSport] = useState<string>("All Matches");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [sortOption, setSortOption] = useState<string>("name"); // Default sorting by name

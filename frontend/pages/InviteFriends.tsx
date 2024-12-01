@@ -1,9 +1,11 @@
 import Navbar from '@/components/Navbar';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { OktoContextType, useOkto } from "okto-sdk-react";
 import { Copy } from "lucide-react";
 
 const InviteFriends = () => {
+  const { logOut } = useOkto() as OktoContextType;
   return (
     <>
       <Navbar />

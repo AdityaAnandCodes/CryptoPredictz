@@ -1,9 +1,11 @@
 import Navbar from "@/components/Navbar";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { OktoContextType, useOkto } from "okto-sdk-react";
 import { Copy } from "lucide-react";
 
 const getCurrentDate = () => {
+  const { logOut } = useOkto() as OktoContextType;
   const today = new Date();
   return today.toISOString().split('T')[0];
 };
