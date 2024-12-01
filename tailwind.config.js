@@ -107,6 +107,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("tailwind-scrollbar-hide"),
     require("tailwindcss-animate"),
 
     plugin(function addTextStyles({ addComponents, theme }) {
