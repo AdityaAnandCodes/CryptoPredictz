@@ -48,14 +48,14 @@ const Rewards = () => {
   }, []);
 
   return (
-    <>
+    <section className="bg-gradient-to-b from-black to-gray-950 min-h-dvh max-sm:pb-44">
       <Navbar />
       <div className="sm:hidden">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
           <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
         </Link>
       </div>
-      <div className="w-full max-h-dvh mt-24 max-sm:mt-0 max-sm:mb-20 px-2 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl shadow-lg">
+      <div className="w-full max-h-dvh  mt-24 max-sm:mt-0 max-sm:mb-20 px-4 max-sm:py-4 max-sm:px-4 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl shadow-lg">
   {/* First row: Hero Block (spans 2 columns) */}
   <div className="col-span-1 md:col-span-2 flex-shrink-0 h-60 hero-3 rounded-lg shadow-lg flex items-center justify-between p-4 text-white text-lg font-bold relative overflow-hidden">
     <div className="absolute top-2 left-2 flex flex-col gap-4 p-4">
@@ -111,10 +111,12 @@ const Rewards = () => {
         You've hit 7 days! Claim your reward below.
       </div>
     )}
-  </div>
+     
 
-  {/* Second row: Reward History Section (spans 1 column) */}
-  <div className="col-span-1 bg-gray-900 p-6 rounded-lg">
+  {/* Reward Section */}
+  
+</div>
+<div className="col-span-1 bg-gray-900 p-4 rounded-lg">
     <h3 className="text-xl font-semibold mb-4">Reward History</h3>
     <ul>
       <li className="text-gray-300 mb-2">
@@ -128,13 +130,13 @@ const Rewards = () => {
       </li>
     </ul>
   </div>
+  </div>
 
-  {/* Reward Section */}
-  
-</div>
+  {/* Second row: Reward History Section (spans 1 column) */}
+ 
 
 
-    </>
+    </section>
   );
 };
 
