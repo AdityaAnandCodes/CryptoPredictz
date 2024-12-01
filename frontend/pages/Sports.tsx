@@ -18,36 +18,30 @@ const Sports = () => {
           <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 py-4">
         {/* Sidebar or aside */}
-        <div className="md:col-span-1 p-5 bg-gray-800 rounded-lg">
+        <div className="md:col-span-1 p-2 bg-black min-h-screen max-sm:min-h-fit bg-opacity-50 rounded-3xl">
           <SportsList onSelectSport={setSelectedSport} />
         </div>
 
         {/* Main Content Section */}
-        <div className="md:col-span-4 p-5 bg-gray-800 rounded-lg">
-          {/* Search bar */}
-          <div className="mb-4">
+        <div className="md:col-span-4 p-2 bg-opacity-50 min-h-screen bg-black rounded-lg">
+          {/* Search and Sort Bar */}
+          <div className="flex sm:flex-row max-sm:flex-col max-sm:items-start mb-4 mt-16 max-sm:mt-4 max-sm:px-4  g-3">
             <input
               type="text"
-              className="w-full p-2 bg-gray-700 text-white rounded-lg"
+              className="w-full sm:w-2/3 max-sm:w-full max-sm:mt-0 max-sm:mb-3 h-10 p-2 bg-gray-700 text-white rounded-lg"
               placeholder="Search matches..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-          </div>
-
-          {/* Sort dropdown */}
-          <div className="mb-4">
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
-              className="w-full p-2 bg-gray-700 text-white rounded-lg"
+              className="w-full sm:w-1/3 max-sm:w-full max-sm:mt-3 h-10 p-2 bg-gray-700 text-white rounded-lg"
             >
               <option value="name">Sort by Name</option>
               <option value="time">Sort by Time</option>
-              <option value="teamA">Sort by Team A</option>
-              <option value="teamB">Sort by Team B</option>
             </select>
           </div>
 

@@ -32,7 +32,7 @@ const Features: React.FC = () => {
               <path d="M15 17h5" />
             </svg>
           </div>
-          <div className="text-center md:text-left">
+          <div className="text-left ">
             <h3 className="text-lg font-semibold mb-2">Instant Bet Placements</h3>
             <p className="text-gray-400 text-base">Place bets instantly with our easy-to-use interface.</p>
           </div>
@@ -59,7 +59,7 @@ const Features: React.FC = () => {
               <circle cx="12" cy="14" r="8" />
             </svg>
           </div>
-          <div className="text-center md:text-left">
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-2">Real-Time Odds</h3>
             <p className="text-gray-400 text-base">Get live, updated odds to make informed bets.</p>
           </div>
@@ -89,7 +89,7 @@ const Features: React.FC = () => {
               <polygon points="12 2 20 7 4 7" />
             </svg>
           </div>
-          <div className="text-center md:text-left">
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-2">Easy Withdrawals</h3>
             <p className="text-gray-400 text-base">Withdraw your funds easily and quickly.</p>
           </div>
@@ -114,7 +114,7 @@ const Features: React.FC = () => {
               <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
             </svg>
           </div>
-          <div className="text-center md:text-left">
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-2">Secure Platform</h3>
             <p className="text-gray-400 text-base">Your data and bets are always protected.</p>
           </div>

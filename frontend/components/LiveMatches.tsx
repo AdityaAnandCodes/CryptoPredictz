@@ -95,10 +95,6 @@ const LiveMatches: React.FC<LiveMatchesProps> = ({ selectedSport, searchQuery, s
         const dateB = parseDate(b.when);
         return dateA.getTime() - dateB.getTime();
       }
-      case "teamA":
-        return a.teamA.localeCompare(b.teamA);
-      case "teamB":
-        return b.teamB.localeCompare(a.teamB);
       default:
         return 0;
     }

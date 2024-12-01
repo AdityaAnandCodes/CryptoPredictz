@@ -31,15 +31,15 @@ export default function BettingCard({ title, time, team1, team1Image, team2, tea
           </div>
           <div className="grid grid-cols-3 gap-2 text-center">
             <div className="p-2 bg-zinc-900 rounded-md">
-              <p className="text-sm font-bold text-purple-600">{odds[0]}</p>
+              <p className="text-sm font-bold text-sky-600">{odds[0]}</p>
               <p className="text-xs text-gray-400">1</p>
             </div>
             <div className="p-2 bg-zinc-900 rounded-md">
-              <p className="text-sm font-bold text-purple-600">{odds[1]}</p>
+              <p className="text-sm font-bold text-sky-600">{odds[1]}</p>
               <p className="text-xs text-gray-400">X</p>
             </div>
             <div className="p-2 bg-zinc-900 rounded-md">
-              <p className="text-sm font-bold text-purple-600">{odds[2]}</p>
+              <p className="text-sm font-bold text-sky-600">{odds[2]}</p>
               <p className="text-xs text-gray-400">2</p>
             </div>
           </div>
