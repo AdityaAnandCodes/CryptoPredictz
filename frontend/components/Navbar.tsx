@@ -5,8 +5,23 @@ import { Copy } from "lucide-react";
 
 const Navbar = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
-  const { showWidgetModal, logOut } = useOkto() as OktoContextType;
-
+  const { showWidgetModal, logOut, getWallets, isLoggedIn } = useOkto() as OktoContextType;
+  const [wallet, setWallet] = useState<string | null>(null);
+  useEffect(() => {
+    if (isLoggedIn) {
+      (async () => {
+        const wallets = await getWallets();
+        if (wallets.wallets.length > 0) {
+          setWallet(wallets.wallets[0].address);
+        }
+      })();
+    }
+  }, [isLoggedIn]);
+  const copyToClipboard = async () => {
+    if (wallet) {
+      await navigator.clipboard.writeText(wallet);
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       // Ensure the calculation checks for the correct value
@@ -129,7 +144,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-center gap-6">
-          <button className=" hover:bg-white hover:text-black transition-all text-white font-light flex gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
+          <button
+            className=" hover:bg-white hover:text-black transition-all text-white font-light flex gap-2 rounded-xl py-2 p-1"
+            onClick={copyToClipboard}
+          >
+            <Copy /> 0x...
+          </button>
           <button className="font-base hover:text-stone-200" onClick={logOut}>
             Logout
           </button>
