@@ -15,16 +15,22 @@ interface Match {
 
 interface UpcomingMatchesProps {
   selectedSport: string;
+  searchQuery: string;
 }
 
-const UpcomingMatches: React.FC<UpcomingMatchesProps> = ({ selectedSport }) => {
-  // If the selected sport is "All Matches", show all matches without filtering
-  const filteredMatches =
-    selectedSport === "All Matches"
-      ? Object.values(BettingCardDummy).flat()
-      : Object.values(BettingCardDummy)
-          .flat()
-          .filter((match: Match) => match.game.toLowerCase().includes(selectedSport.toLowerCase()));
+const UpcomingMatches: React.FC<UpcomingMatchesProps> = ({ selectedSport, searchQuery }) => {
+  // If the selected sport is "All Matches", show all matches without filtering by sport
+  const filteredMatches = Object.values(BettingCardDummy)
+    .flat()
+    .filter(
+      (match: Match) =>
+        // If selected sport is "All Matches", do not filter by sport
+        (selectedSport === "All Matches" || match.game.toLowerCase().includes(selectedSport.toLowerCase())) &&
+        (match.game.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          match.teamA.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          match.teamB.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          match.location.toLowerCase().includes(searchQuery.toLowerCase())), // Search in game, teams, or location
+    );
 
   return (
     <div className="text-white p-4 pt-2">
