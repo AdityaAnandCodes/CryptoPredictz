@@ -12,6 +12,24 @@
   display: none;
 }
 
+.hero-1 {
+  background-image: url("../public/OrangeGradient.png");
+  background-size: cover;
+  background-position: center;
+}
+.hero-2 {
+  background-image: url("../public/BlueGradient.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-3 {
+  background-image: url("../public/GreenGradient.png");
+  background-size: cover;
+  background-position: center;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -85,6 +103,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-
-
