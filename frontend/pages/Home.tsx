@@ -8,13 +8,11 @@ import Navmini from "@/components/Navmini";
 
 
 
-
 const Home = () => {
   
   return (
     <main className="text-white min-h-screen relative">
       <Navbar />
-      
       <Navmini />
       <Hero />
       <Features />
