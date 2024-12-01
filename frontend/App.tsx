@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <main className="bg-gradient-to-b from-black via-neutral-950 to-gray-950 text-white min-h-screen relative overflow-x-hidden">
+      <main className="bg-gradient-to-b from-black via-neutral-900 to-gray-900 text-white min-h-screen relative overflow-x-hidden">
         <Routes>
           {/* <Route path="/" element={<Home />} />
           <Route path="/authentication" element={<AuthenticationPage />} />

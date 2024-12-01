@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       {/* Navbar for larger devices */}
 
-      <nav className="fixed top-0 left-0 right-0 z-50 w-full items-center text-stone-500 justify-between px-5 py-3 bg-zinc-900 hidden md:flex">
+      <nav className="fixed top-0 left-0 right-0 z-50 w-full items-center text-white justify-between px-5 py-4 bg-zinc-950 hidden md:flex">
         {/* Logo */}
         <div>
           <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
