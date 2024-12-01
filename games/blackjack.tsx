@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import NavBar from "../frontend/components/Navbar";
+import { Link } from "react-router-dom";
 
 // Type Definitions
 interface Card {
@@ -189,7 +190,12 @@ const BlackjackGame: React.FC = () => {
   return (
     <>
       <NavBar />
-      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+      <div className="sm:hidden">
+        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
+          <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
+        </Link>
+      </div>
+      <div className="min-h-screen text-white flex flex-col items-center justify-center p-4">
         <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">
           <div className="text-center mb-4">
             <h1 className="text-3xl font-bold">Blackjack</h1>
@@ -219,16 +225,16 @@ const BlackjackGame: React.FC = () => {
               <>
                 <button
                   onClick={() => setCurrentBet(Math.max(10, currentBet - 10))}
-                  className=" hover:bg-black bg-zinc-800 text-white px-4 py-2 rounded"
+                  className=" hover:bg-gray-100 bg-white text-black px-4 py-2 rounded-full transition-all"
                 >
                   <ChevronLeft />
                 </button>
-                <button onClick={placeBet} className="bg-zinc-800 hover:bg-black text-white px-6 py-2 rounded">
+                <button onClick={placeBet} className="bg-white hover:bg-gray-100 text-black font-semibold text-xl px-6 py-2 rounded-full transition-all">
                   ${currentBet}
                 </button>
                 <button
                   onClick={() => setCurrentBet(Math.min(balance, currentBet + 10))}
-                  className="bg-zinc-800 hover:bg-black text-white px-4 py-2 rounded"
+                  className=" hover:bg-gray-100 bg-white text-black px-4 py-2 rounded-full transition-all"
                 >
                   <ChevronRight />
                 </button>

@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Accounts from "./pages/Accounts";
@@ -8,6 +6,8 @@ import InviteFriends from "./pages/InviteFriends";
 import Sports from "./pages/Sports";
 import AuthenticationPage from "./pages/AuthenticationPage";
 import { OktoContextType, useOkto } from "okto-sdk-react";
+import BlackjackGame from "../games/blackjack";
+import SlotMachine from "../games/slotMachine"
 
 function App() {
   // const { connected } = useWallet();
@@ -31,6 +31,8 @@ function App() {
               <Route path="/account" element={<Accounts />} />
               <Route path="/reward" element={<Rewards />} />
               <Route path="/affiliate" element={<InviteFriends />} />
+              <Route path= "/blackjack" element={<BlackjackGame />} />
+              <Route path = "slotmachine" element={<SlotMachine />} />
               <Route path="/sports" element={<Sports />} />
             </>
           ) : (

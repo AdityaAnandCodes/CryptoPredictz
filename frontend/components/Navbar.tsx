@@ -115,6 +115,8 @@ const Navbar = () => {
             Affiliate
           </Link>
         </div>
+        <div className="flex items-center justify-center gap-6">
+          <button className="font-base hover:text-stone-200">Logout</button>
         <button onClick={showWidgetModal} className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all">
           {/* <Link to="/account" className="flex items-center text-lg hover:text-stone-600"> */}
           <svg
@@ -136,6 +138,7 @@ const Navbar = () => {
           Account
           {/* </Link> */}
         </button>
+        </div>
       </nav>
 
       {/* Bottom Navbar for small devices */}

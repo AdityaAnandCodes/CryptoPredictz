@@ -1,4 +1,6 @@
+import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SlotMachine = () => {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -37,6 +39,13 @@ const SlotMachine = () => {
   };
 
   return (
+    <>
+    <Navbar />
+    <div className="sm:hidden">
+        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
+          <img className="h-auto w-48 p-4" src="../../public/logo.png" alt="Logo" />
+        </Link>
+      </div>
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
       <h1 className="text-4xl font-bold mb-4">🎰 Slot Machine 🎰</h1>
       <div className="text-lg bg-gray-700 p-4 rounded-lg mb-6 w-[24rem]">
@@ -65,6 +74,7 @@ const SlotMachine = () => {
         <p className="mt-4 text-lg">{result}</p>
       </div>
     </div>
+    </>
   );
 };
 
