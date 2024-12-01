@@ -15,7 +15,8 @@ function App() {
 
   return (
     <Router>
-      <main className="bg-gradient-to-b from-black via-neutral-900 to-gray-900 text-white min-h-screen relative overflow-x-hidden">
+      <main className="min-h-screen bg-repeat bg-[url('/bg.jpg')] bg-top">
+        {/* <main className="bg-gradient-to-b from-black via-neutral-900 to-gray-900 text-white min-h-screen relative overflow-x-hidden"> */}
         <Routes>
           {/* <Route path="/" element={<Home />} />
           <Route path="/authentication" element={<AuthenticationPage />} />

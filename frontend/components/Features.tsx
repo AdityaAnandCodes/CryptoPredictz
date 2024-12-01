@@ -6,7 +6,7 @@ const Features: React.FC = () => {
       <h2 className="text-3xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-white">Key Features</h2>
       <div className="md:grid md:grid-cols-2 gap-4">
         {/* Feature 1 */}
-        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-40 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
+        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-90 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
           <div className="w-20 h-20 mb-4 md:mb-0 md:mr-6 flex items-center justify-center">
             {/* Feature Icon (SVG) */}
             <svg
@@ -39,7 +39,7 @@ const Features: React.FC = () => {
         </div>
 
         {/* Feature 2 */}
-        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-40 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
+        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-90 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
           <div className="w-20 h-20 mb-4 md:mb-0 md:mr-6 flex items-center justify-center">
             {/* Feature Icon (SVG) */}
             <svg
@@ -66,7 +66,7 @@ const Features: React.FC = () => {
         </div>
 
         {/* Feature 3 */}
-        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-40 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
+        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-90 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
           <div className="w-20 h-20 mb-4 md:mb-0 md:mr-6 flex items-center justify-center">
             {/* Feature Icon (SVG) */}
             <svg
@@ -96,7 +96,7 @@ const Features: React.FC = () => {
         </div>
 
         {/* Feature 4 */}
-        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-40 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
+        <div className="flex gap-4 items-center mb-8 md:flex-row md:items-start bg-gray-900 bg-opacity-90 rounded-lg p-6 hover:scale-95 duration-300 transition-all">
           <div className="w-20 h-20 mb-4 md:mb-0 md:mr-6 flex items-center justify-center">
             {/* Feature Icon (SVG) */}
             <svg
