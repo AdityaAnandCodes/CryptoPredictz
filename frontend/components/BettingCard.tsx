@@ -13,7 +13,7 @@ interface BettingCardProps {
 export default function BettingCard({ title, time, team1, team1Image, team2, team2Image, odds }: BettingCardProps) {
   return (
     <>
-      <Card className="min-w-[250px] bg-zinc-950 border border-zinc-800 rounded-md shadow-md cursor-pointer">
+      <Card className="min-w-[250px] bg-zinc-950 border border-zinc-800 rounded-xl shadow-md cursor-pointer">
         <CardHeader className="p-3 bg-zinc-900 rounded-t-md text-left">
           <p className="text-xs font-medium text-gray-400">{title}</p>
           <p className="text-xs text-gray-500">{time}</p>
