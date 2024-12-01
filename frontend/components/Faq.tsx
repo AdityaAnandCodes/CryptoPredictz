@@ -42,7 +42,7 @@ const Faq: React.FC = () => {
 
   return (
     <div className="text-white py-16 px-4 md:px-12">
-      <h2 className="text-xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-white">
+      <h2 className="text-3xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-white">
         Frequently Asked Questions
       </h2>
       <div className="space-y-6">
