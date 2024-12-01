@@ -7,11 +7,19 @@ import Sports from "./pages/Sports";
 import AuthenticationPage from "./pages/AuthenticationPage";
 import { OktoContextType, useOkto } from "okto-sdk-react";
 import BlackjackGame from "../games/blackjack";
-import SlotMachine from "../games/slotMachine"
+import SlotMachine from "../games/slotMachine";
+import { useEffect } from "react";
 
 function App() {
   // const { connected } = useWallet();
-  const { isLoggedIn } = useOkto() as OktoContextType;
+  const { isLoggedIn, createWallet } = useOkto() as OktoContextType;
+  useEffect(() => {
+    if (isLoggedIn) {
+      (async () => {
+        await createWallet();
+      })();
+    }
+  }, [isLoggedIn]);
 
   return (
     <Router>
@@ -31,8 +39,8 @@ function App() {
               <Route path="/account" element={<Accounts />} />
               <Route path="/reward" element={<Rewards />} />
               <Route path="/affiliate" element={<InviteFriends />} />
-              <Route path= "/blackjack" element={<BlackjackGame />} />
-              <Route path = "slotmachine" element={<SlotMachine />} />
+              <Route path="/blackjack" element={<BlackjackGame />} />
+              <Route path="slotmachine" element={<SlotMachine />} />
               <Route path="/sports" element={<Sports />} />
             </>
           ) : (
