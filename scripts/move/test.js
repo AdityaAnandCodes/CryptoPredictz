@@ -8,7 +8,7 @@ async function test() {
   await move.test({
     packageDirectoryPath: "contract",
     namedAddresses: {
-      counter_app_addr: "0x100",
+      prediction_market: "0x100",
     },
   });
 }

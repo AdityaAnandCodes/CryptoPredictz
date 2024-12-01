@@ -21,10 +21,10 @@ async function publish() {
   move
     .createObjectAndPublishPackage({
       packageDirectoryPath: "contract",
-      addressName: "counter_app_addr",
+      addressName: "prediction_market",
       namedAddresses: {
         // Publish module to new object, but since we create the object on the fly, we fill in the publisher's account address here
-        counter_app_addr: process.env.VITE_MODULE_PUBLISHER_ACCOUNT_ADDRESS,
+        prediction_market: process.env.VITE_MODULE_PUBLISHER_ACCOUNT_ADDRESS,
       },
       extraArguments: [
         `--private-key=${process.env.VITE_MODULE_PUBLISHER_ACCOUNT_PRIVATE_KEY}`,

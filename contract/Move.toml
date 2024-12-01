@@ -1,12 +1,12 @@
 [package]
-name = "TelegramCounterAppTemplate"
-version = "1.0.0"
-authors = []
+name = "prediction_market"
 
+version = "1.0.0"
+authors = ["Aditya & Raksha"]
 [addresses]
-counter_app_addr = "_"
+prediction_market = "_"
 
 [dependencies]
-AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "mainnet", subdir = "aptos-move/framework/aptos-framework" }
 
 [dev-dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "main" }

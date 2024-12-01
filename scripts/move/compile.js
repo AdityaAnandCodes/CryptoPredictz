@@ -14,7 +14,7 @@ async function compile() {
     packageDirectoryPath: "contract",
     namedAddresses: {
       // Compile module with account address
-      counter_app_addr: process.env.VITE_MODULE_PUBLISHER_ACCOUNT_ADDRESS,
+      prediction_market: process.env.VITE_MODULE_PUBLISHER_ACCOUNT_ADDRESS,
     },
   });
 }
