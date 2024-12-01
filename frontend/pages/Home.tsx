@@ -8,8 +8,8 @@ import Games from "@/components/Games";
 const Home = () => {
   return (
     <main className="text-white min-h-screen relative">
-      <Hero />
       <Navbar />
+      <Hero />
 
       <Features />
       <Games />
