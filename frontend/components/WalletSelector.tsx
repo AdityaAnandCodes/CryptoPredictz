@@ -64,7 +64,7 @@ export function WalletSelector() {
       ) : (
         <WalletItem.ConnectButton asChild>
         <Button
-  className="bg-purple-700 hover:bg-purple-800 shadow shadow-purple-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-semibold text-md "
+  className="bg-purple-700 hover:bg-purple-800 shadow shadow-purple-800  hover:scale-105 hover:shadow-lg font-semibold text-md transition-all duration-300 transform "
   size="sm"
 >
   Connect
