@@ -194,9 +194,9 @@ const BlackjackGame: React.FC = () => {
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
           <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
         </Link>
-        <button className="pb-2 font-semibold">Logout</button>
+        <button className="pb-2 font-semibold text-white">Logout</button>
       </div>
-      <div className="min-h-screen text-white flex flex-col items-center justify-center p-4">
+      <div className="min-h-screen max-sm:max-h-screen max-sm:pt-96 text-white flex flex-col items-center justify-center p-4">
         <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">
           <div className="text-center mb-4">
             <h1 className="text-3xl font-bold">Blackjack</h1>
