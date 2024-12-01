@@ -48,7 +48,7 @@ const Rewards = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-b from-black to-gray-950 min-h-dvh max-sm:pb-44">
+    <section className=" min-h-dvh max-sm:pb-44">
       <Navbar />
       <div className="sm:hidden">
         <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">

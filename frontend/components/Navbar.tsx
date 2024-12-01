@@ -27,22 +27,22 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 w-full items-center text-white justify-between px-5 py-4 bg-zinc-950 hidden md:flex">
         {/* Logo */}
         <div>
-          <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
+          <Link to="/" className="text-white text-2xl font-normal hover:text-stone-200">
             <img className="h-auto w-44 " src="../../public/logo.png" alt="" />
           </Link>
         </div>
 
         {/* Center Navigation Links */}
-        <div className="flex items-center gap-6">
-          <Link to="/" className="flex items-center text-lg hover:text-stone-600">
+        <div className="flex font-light items-center gap-6 ">
+          <Link to="/" className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="26"
+              height="26"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="mr-2"
@@ -52,15 +52,15 @@ const Navbar = () => {
             </svg>
             Home
           </Link>
-          <Link to="/sports" className="flex items-center text-lg hover:text-stone-600">
+          <Link to="/sports" className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="26"
+              height="26"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="mr-2"
@@ -74,15 +74,15 @@ const Navbar = () => {
             </svg>
             Sports
           </Link>
-          <Link to="/reward" className="flex items-center text-lg hover:text-stone-600">
+          <Link to="/reward" className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="26"
+              height="26"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="mr-2"
@@ -93,15 +93,15 @@ const Navbar = () => {
             </svg>
             Rewards
           </Link>
-          <Link to="/affiliate" className="flex items-center text-lg hover:text-stone-600">
+          <Link to="/affiliate" className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="26"
+              height="26"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="mr-2"
@@ -115,16 +115,16 @@ const Navbar = () => {
             Affiliate
           </Link>
         </div>
-        <button onClick={showWidgetModal} className="flex items-center text-lg hover:text-stone-600">
+        <button onClick={showWidgetModal} className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all">
           {/* <Link to="/account" className="flex items-center text-lg hover:text-stone-600"> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
+            width="26"
+            height="26"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
             className="mr-2"
@@ -224,7 +224,7 @@ const Navbar = () => {
             </svg>
             <span className="text-xs mt-1">Affiliate</span>
           </Link>
-          <button onClick={showWidgetModal} className="flex flex-col items-center text-center text-black">
+          <button onClick={showWidgetModal} className="flex flex-col font-light text-base items-center text-center text-black">
             {/* <Link to="/account" className="flex flex-col items-center text-center text-black"> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
