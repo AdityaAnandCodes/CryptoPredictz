@@ -1,11 +1,9 @@
 import Navbar from "@/components/Navbar";
+import Navmini from "@/components/Navmini";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { OktoContextType, useOkto } from "okto-sdk-react";
-import { Copy } from "lucide-react";
+
 
 const getCurrentDate = () => {
-  const { logOut } = useOkto() as OktoContextType;
   const today = new Date();
   return today.toISOString().split('T')[0];
 };
@@ -53,17 +51,7 @@ const Rewards = () => {
   return (
     <section className=" min-h-dvh text-white max-sm:pb-44">
       <Navbar />
-      <div className="sm:hidden flex justify-between items-center p-4">
-        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
-        </Link>
-        <div className="flex justify-center items-center gap-2 " >
-           <button className="text-sm bg-white text-black transition-all font-light flex items-center justify-center gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
-        <button className="pb-2 font-semibold text-sm" onClick={logOut}>
-          Logout
-        </button>
-        </div>
-      </div>
+      <Navmini />
       <div className="w-full max-h-dvh  mt-12 py-24 max-sm:mt-0 max-sm:mb-20 px-4 max-sm:py-4 max-sm:px-4 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl shadow-lg">
   {/* First row: Hero Block (spans 2 columns) */}
   <div className="col-span-1 md:col-span-2 flex-shrink-0 h-60 hero-3 rounded-lg shadow-lg flex items-center justify-between p-4 text-white text-lg font-bold relative overflow-hidden">

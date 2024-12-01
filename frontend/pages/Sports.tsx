@@ -3,12 +3,10 @@ import SportsList from "@/components/SportsList";
 import UpcomingMatches from "@/components/UpcomingMatches";
 import LiveMatches from "@/components/LiveMatches";
 import Navbar from "@/components/Navbar";
-import { Link } from "react-router-dom";
-import { OktoContextType, useOkto } from "okto-sdk-react";
-import { Copy } from "lucide-react";
+import Navmini from "@/components/Navmini";
+
 
 const Sports = () => {
-  const { logOut } = useOkto() as OktoContextType;
   const [selectedSport, setSelectedSport] = useState<string>("All Matches");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [sortOption, setSortOption] = useState<string>("name"); // Default sorting by name
@@ -16,17 +14,7 @@ const Sports = () => {
   return (
     <>
       <Navbar />
-      <div className="sm:hidden flex justify-between items-center p-4">
-        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
-        </Link>
-        <div className="flex justify-center items-center gap-2 " >
-           <button className="text-sm bg-white text-black transition-all font-light flex items-center justify-center gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
-        <button className="pb-2 font-semibold text-sm" onClick={logOut}>
-          Logout
-        </button>
-        </div>
-      </div>
+      <Navmini />
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 py-4">
         {/* Sidebar or aside */}
         <div className="md:col-span-1 p-2 bg-black min-h-screen max-sm:min-h-fit bg-opacity-50 rounded-3xl">

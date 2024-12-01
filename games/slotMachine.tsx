@@ -47,12 +47,12 @@ const SlotMachine = () => {
         </Link>
         <button className="pb-2 font-semibold text-white">Logout</button>
       </div>
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
-      <h1 className="text-4xl font-bold mb-4">🎰 Slot Machine 🎰</h1>
-      <div className="text-lg bg-gray-700 p-4 rounded-lg mb-6 w-[24rem]">
+    <div className="min-h-screen flex flex-col items-center justify-center text-white">
+      <h1 className="text-4xl font-bold mb-4">🎰<span> </span> Slot Machine <span> </span>🎰</h1>
+      <div className="text-lg bg-gray-700 bg-opacity-90 p-4 rounded-lg mb-6 w-[24rem]">
         <p>Fee: $5 | Win: $10</p>
       </div>
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-[24rem]">
+      <div className="bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg w-[24rem]">
         <h2 className="text-xl mb-4">Your Balance: ${balance}</h2>
         <div className="flex justify-center mb-4 space-x-4">
           {slots.map((slot, index) => (

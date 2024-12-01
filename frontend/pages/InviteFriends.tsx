@@ -1,25 +1,14 @@
 import Navbar from '@/components/Navbar';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { OktoContextType, useOkto } from "okto-sdk-react";
-import { Copy } from "lucide-react";
+import Navmini from '@/components/Navmini';
+
 
 const InviteFriends = () => {
-  const { logOut } = useOkto() as OktoContextType;
+  
   return (
     <>
       <Navbar />
-      <div className="sm:hidden flex justify-between items-center p-4">
-        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
-        </Link>
-        <div className="flex justify-center items-center gap-2 " >
-           <button className="text-sm bg-white text-black transition-all font-light flex items-center justify-center gap-2 rounded-xl py-2 p-1"><Copy /> 0x...</button>
-        <button className="pb-2 font-semibold text-sm" onClick={logOut}>
-          Logout
-        </button>
-        </div>
-      </div>
+      <Navmini />
+      
       <div className="text-white min-h-screen flex flex-col items-center pt-24 pb-12 max-sm:pt-4 px-4">
         {/* Hero Section */}
         <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between  bg-[url('/BlueGradient.png')] rounded-lg shadow-xl p-12 max-sm:p-4 mb-10 relative overflow-hidden">
