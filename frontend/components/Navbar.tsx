@@ -10,7 +10,7 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-            CryptoBetz
+            <img className="h-auto w-44 " src="../../public/logo.png" alt="" />
           </Link>
         </div>
 
