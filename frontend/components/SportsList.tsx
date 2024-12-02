@@ -30,7 +30,7 @@ const SportsList = ({ onSelectSport }: { onSelectSport: React.Dispatch<React.Set
       {/* Horizontal scroll for mobile */}
       <div className="flex space-x-4 overflow-x-auto scrollbar-hide sm:hidden">
         <div className="flex flex-col items-center cursor-pointer" onClick={() => onSelectSport("All Matches")}>
-          <img src="../../public/all.avif" alt="All Matches" className="w-12 h-12 rounded-full" />
+          <img src="../../public/all.avif" alt="All Matches" className="w-12 h-12 object-cover rounded-full" />
           <span className="text-sm text-white mt-1 truncate w-16 text-center">All</span>
         </div>
         {sportsList.map((sport) => (
