@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
+import { Link } from "react-router-dom";
 
 const Games = () => {
   const sectionRef = useRef(null);
@@ -48,34 +49,30 @@ const Games = () => {
       <div className="flex justify-center items-center gap-28 max-w-full max-sm:flex-col">
         {/* Blackjack Game Section */}
         <div className="p-4 pb-10 rounded-xl bg-white bg-opacity-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-          <a href="/blackjack">
-            <div className="relative w-64 h-64 blackJack rounded-lg shadow-lg overflow-hidden ">
-              <a
-                href="/blackjack"
-                className="absolute inset-0 flex justify-center items-center text-white text-2xl font-bold"
-              >
-                <div className="text-center p-4"></div>
-              </a>
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+        <Link to="/blackjack">
+          <div className="relative w-64 h-64 blackJack rounded-lg shadow-lg overflow-hidden ">
+            <div className="absolute inset-0 flex justify-center items-center text-white text-2xl font-bold">
+              <div className="text-center p-4"></div>
             </div>
-          </a>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+          </div>
+        </Link>
+
         </div>
 
         {/* Slot Machine Game Section */}
         <div className="p-4 pb-10 rounded-xl bg-white bg-opacity-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-          <a href="/slotmachine">
-            <div className="relative slotMachine w-64 h-64  rounded-lg shadow-lg overflow-hidden">
-              <a
-                href="/slotmachine"
-                className="absolute inset-0 flex justify-center items-center text-white text-2xl font-bold"
-              >
-                <div className="text-center p-4"></div>
-              </a>
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <Link to="/slotmachine">
+          <div className="relative slotMachine w-64 h-64 rounded-lg shadow-lg overflow-hidden">
+            <div className="absolute inset-0 flex justify-center items-center text-white text-2xl font-bold">
+              <div className="text-center p-4"></div>
             </div>
-          </a>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          </div>
+        </Link>
+
         </div>
       </div>
     </section>
