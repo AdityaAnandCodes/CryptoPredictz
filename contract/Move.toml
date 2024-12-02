@@ -7,6 +7,4 @@ authors = ["Aditya & Raksha"]
 prediction_market = "_"
 
 [dependencies]
-
-[dev-dependencies]
-AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "main" }
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "main" }
