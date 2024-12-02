@@ -10,31 +10,32 @@ const Faq: React.FC = () => {
 
   const faqs: FaqItem[] = [
     {
-      question: "How do I place a bet on the platform?",
-      answer:
-        "To place a bet, simply select a game, choose the odds, and enter the amount you'd like to wager. Confirm your bet and wait for the result. All bets are placed instantly on the blockchain for transparency.",
+        question: "How do I participate in predictions on the platform?",
+        answer:
+            "To participate, select a market, choose your prediction, and enter the amount you'd like to stake. Confirm your prediction, and it will be recorded on the blockchain for transparency. You'll receive rewards if your prediction is correct.",
     },
     {
-      question: "What is the minimum bet amount?",
-      answer:
-        "The minimum bet amount varies depending on the game and odds. You can check the specific requirements for each match directly on the betting page.",
+        question: "What is the minimum stake amount?",
+        answer:
+            "The minimum stake amount varies depending on the market and conditions. You can check the specific requirements for each market directly on the prediction page.",
     },
     {
-      question: "How do I withdraw my winnings?",
-      answer:
-        "You can withdraw your winnings directly to your wallet by going to the 'Withdraw' section in your account settings. Withdrawals are processed quickly on the blockchain.",
+        question: "How do I claim my rewards for correct predictions?",
+        answer:
+            "You can claim your rewards directly in your account by going to the 'Claim Rewards' section. All rewards are processed on the blockchain and transferred to your wallet securely.",
     },
     {
-      question: "Is my data safe on the platform?",
-      answer:
-        "Yes! Our platform uses blockchain technology to secure all transactions. Your personal data is encrypted, and your betting activities are transparent and auditable.",
+        question: "Is my data secure on the platform?",
+        answer:
+            "Absolutely! Our platform leverages blockchain technology to secure all transactions. Your personal data is encrypted, and all prediction activities are transparent and auditable.",
     },
     {
-      question: "Can I bet on multiple games at the same time?",
-      answer:
-        "Yes, you can place multiple bets on different games simultaneously. Each bet is processed independently, and you will receive real-time updates on the status of each bet.",
+        question: "Can I participate in multiple prediction markets simultaneously?",
+        answer:
+            "Yes, you can engage in multiple prediction markets at the same time. Each prediction is processed independently, and you will receive updates on the outcome of each market as they resolve.",
     },
-  ];
+];
+
 
   const toggleOpen = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

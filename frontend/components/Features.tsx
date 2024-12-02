@@ -33,8 +33,8 @@ const Features: React.FC = () => {
             </svg>
           </div>
           <div className="text-left ">
-            <h3 className="text-lg font-semibold mb-2">Instant Bet Placements</h3>
-            <p className="text-gray-400 text-base">Place bets instantly with our easy-to-use interface.</p>
+            <h3 className="text-lg font-semibold mb-2">Get Instant Prediction</h3>
+            <p className="text-gray-400 text-base">Place bets on base of Pridictions earn money easy</p>
           </div>
         </div>
 
