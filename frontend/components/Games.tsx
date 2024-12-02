@@ -51,7 +51,7 @@ const Games = () => {
           <a href="/blackjack">
             <div className="relative w-64 h-64 blackJack rounded-lg shadow-lg overflow-hidden ">
               <a
-                href="/games/blackjack"
+                href="/blackjack"
                 className="absolute inset-0 flex justify-center items-center text-white text-2xl font-bold"
               >
                 <div className="text-center p-4"></div>
