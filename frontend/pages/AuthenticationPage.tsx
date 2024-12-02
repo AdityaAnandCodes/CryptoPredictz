@@ -2,6 +2,7 @@ import { useOkto, type OktoContextType } from "okto-sdk-react";
 import { GoogleLogin } from "@react-oauth/google";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
 
 const AuthenticationPage = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,8 @@ const AuthenticationPage = () => {
   const [authToken, setAuthToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const { sendEmailOTP, verifyEmailOTP, authenticate } = useOkto() as OktoContextType;
-  const ballsRef = useRef<HTMLDivElement[]>([]); // Store references to the balls
+  const ballsRef = useRef<HTMLDivElement[]>([]);
+  const navigate = useNavigate(); // Import the hook
 
   useEffect(() => {
     ballsRef.current.forEach((ball) => {
@@ -59,6 +61,7 @@ const AuthenticationPage = () => {
       const success = await verifyEmailOTP(email, otp, otpToken!);
       if (success) {
         setOtpSent(false);
+        navigate("/"); // Redirect to the home page
       } else {
         alert("Invalid OTP");
       }
@@ -73,13 +76,13 @@ const AuthenticationPage = () => {
     authenticate(idToken, (authResponse, error) => {
       if (authResponse) {
         setAuthToken(authResponse.auth_token);
+        navigate("/"); // Redirect to the home page
       } else if (error) {
         console.error("Authentication error:", error);
       }
     });
   };
 
-  // Pre-calculate ball styles
   const ballStyles = useRef(
     [...Array(16)].map(() => ({
       width: `${Math.random() * 20 + 50}px`,

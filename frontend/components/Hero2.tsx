@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           <div className="absolute top-2 left-2 flex flex-col gap-2">
             <div className="text-4xl max-sm:text-3xl font-bold mt-5 ml-5 mr-5">Play Games Earn Exciting Prize</div>
             <div className="text-lg max-sm:text-base px-5 font-semibold text-gray-100">Different Casino Games</div>
-            <div className="bg-cyan-800 ml-5 max-sm:text-sm text-base bg-opacity-40 rounded-lg w-fit p-2 px-4">
+            <div className="bg-cyan-800 ml-5 max-sm:text-sm text-base bg-opacity-15 rounded-lg w-fit p-2 px-4">
               Play Games
             </div>
           </div>
