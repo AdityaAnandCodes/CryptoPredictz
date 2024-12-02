@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Navmini from "@/components/Navmini";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -41,12 +42,7 @@ const SlotMachine = () => {
   return (
     <>
     <Navbar />
-    <div className="sm:hidden flex justify-between items-center p-4">
-        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
-        </Link>
-        <button className="pb-2 font-semibold text-white">Logout</button>
-      </div>
+    <Navmini />
     <div className="min-h-screen flex flex-col items-center justify-center text-white">
       <h1 className="text-4xl font-bold mb-4">🎰<span> </span> Slot Machine <span> </span>🎰</h1>
       <div className="text-lg bg-gray-700 bg-opacity-90 p-4 rounded-lg mb-6 w-[24rem]">
