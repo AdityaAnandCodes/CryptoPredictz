@@ -108,7 +108,7 @@ export default function BettingModal({
               <div className="mt-4">
                 <button
                   onClick={handlePlaceBet}
-                  className="w-full border-2 border-cyan-300 border-offset-2 bg-gradient-to-br  from-green-400 to-green-500 text-white p-2 rounded-md hover:scale-95 duration-300 transition-all"
+                  className="w-full  bg-gradient-to-br  from-green-400 to-green-500 text-white p-2 rounded-md hover:scale-95 duration-300 transition-all"
                 >
                   Place Bet
                 </button>

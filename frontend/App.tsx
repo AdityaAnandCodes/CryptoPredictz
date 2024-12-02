@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Router>
-      <main className="min-h-screen bg-fixed bg-center bg-[url('/bg.jpg')] ">
+      <main className="min-h-screen overflow-hidden bg-fixed bg-center bg-[url('/bg.jpg')] ">
         {/* <main className="bg-gradient-to-b from-black via-neutral-900 to-gray-900 text-white min-h-screen relative overflow-x-hidden"> */}
         <Routes>
           {/* <Route path="/" element={<Home />} />
