@@ -43,7 +43,8 @@ const updateLoginStreak = () => {
 const Rewards = () => {
   const [loginStreak, setLoginStreak] = useState<number>(0);
   const [reward, setReward] = useState<boolean>(false);
-  const { logOut, getWallets } = useOkto() as OktoContextType;
+  const { getWallets } = useOkto() as OktoContextType;
+
   const config = new AptosConfig({ network: Network.TESTNET });
   const aptos = new Aptos(config);
 
