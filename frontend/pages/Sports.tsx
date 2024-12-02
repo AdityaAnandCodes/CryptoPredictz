@@ -28,7 +28,7 @@ const Sports = () => {
           </div>
 
           {/* Right Image Section */}
-          <img className="w-80 max-sm:w-40 h-auto z-10" src="/public/Basketball.png" alt="Basketball" />
+          <img className="w-80 max-sm:w-40 h-auto z-10" src="/Basketball.png" alt="Basketball" />
 
           {/* Decorative Element */}
           <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-black/20 rounded-2xl"></div>

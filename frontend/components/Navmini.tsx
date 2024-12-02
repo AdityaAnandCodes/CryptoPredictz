@@ -24,7 +24,7 @@ const Navmini = () => {
   return (
     <div className="sm:hidden flex justify-between items-center p-4">
       <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-        <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
+        <img className="h-auto w-48" src="/logo.png" alt="Logo" />
       </Link>
       <div className="flex justify-center items-center gap-2 ">
         <button

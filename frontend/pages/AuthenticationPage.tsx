@@ -96,7 +96,7 @@ const AuthenticationPage = () => {
     <section className="min-h-screen w-full relative overflow-hidden bg-gradient-to-b from-black via-black to-gray-950">
       <div className="text-4xl font-bold p-4 px-8 absolute text-white z-10">
         <a href="/">
-          <img src="../../public/logo.png" className="w-44 h-auto" alt="" />
+          <img src="/logo.png" className="w-44 h-auto" alt="" />
         </a>
       </div>
       <div className="flex h-screen items-center justify-center flex-wrap z-10 px-4">

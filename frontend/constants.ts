@@ -151,28 +151,28 @@ export const sportsList = [
   {
     id: 1,
     name: "Football",
-    image: "../public/soccor.jpg",
+    image: "/soccor.jpg",
   },
   {
     id: 2,
     name: "Basketball",
-    image: "../public/basketball.jpg",
+    image: "/basketball.jpg",
   },
 
   {
     id: 3,
     name: "Tennis",
-    image: "../public/tennis.jpg",
+    image: "/tennis.jpg",
   },
   {
     id: 4,
     name: "Cricket",
-    image: "../public/cricket.png",
+    image: "/cricket.png",
   },
   {
     id: 5,
     name: "Kabaddi",
-    image: "../public/kabaddi.webp",
+    image: "/kabaddi.webp",
   },
 ];
 

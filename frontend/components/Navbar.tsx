@@ -46,7 +46,7 @@ const Navbar = () => {
           <NavLink to="/" className="text-white text-2xl font-normal hover:text-stone-200 ">
             <img
               className="h-auto w-44 hover:scale-105 duration-300 transition-all "
-              src="../../public/logo.png"
+              src="/logo.png"
               alt=""
             />
           </NavLink>

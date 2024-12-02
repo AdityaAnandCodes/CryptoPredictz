@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           </div>
           <img
             className="absolute bottom-2 right-2 w-40 h-40"
-            src="/public/cute-cool-shiba-inu-dog-holding-baseball-bat-cartoon-vector-icon-illustration-animal-sport-icon-concept-isolated-premium-vector-flat-cartoon-style.png"
+            src="/cute-cool-shiba-inu-dog-holding-baseball-bat-cartoon-vector-icon-illustration-animal-sport-icon-concept-isolated-premium-vector-flat-cartoon-style.png"
           />
         </div>
 
