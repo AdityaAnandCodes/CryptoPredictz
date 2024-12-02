@@ -43,8 +43,8 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 w-full items-center text-white justify-between px-5 py-4 bg-zinc-950 hidden md:flex">
         {/* Logo */}
         <div>
-          <Link to="/" className="text-white text-2xl font-normal hover:text-stone-200">
-            <img className="h-auto w-44 " src="../../public/logo.png" alt="" />
+          <Link to="/" className="text-white text-2xl font-normal hover:text-stone-200 ">
+            <img className="h-auto w-44 hover:scale-105 duration-300 transition-all " src="../../public/logo.png" alt="" />
           </Link>
         </div>
 
@@ -145,12 +145,12 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-center gap-6">
           <button
-            className=" hover:bg-white hover:text-black transition-all text-white font-light flex gap-2 rounded-xl py-2 p-1"
+            className=" hover:bg-white hover:text-black hover:scale-95 duration-300  transition-all text-white font-light flex gap-2 rounded-xl py-2 p-1"
             onClick={copyToClipboard}
           >
             <Copy /> 0x...
           </button>
-          <button className="font-base hover:text-stone-200" onClick={logOut}>
+          <button className="font-base hover:scale-95 hover:text-stone-200 duration-300  transition-all" onClick={logOut}>
             Logout
           </button>
           <button
