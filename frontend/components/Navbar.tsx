@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
 
         {/* Center Navigation Links */}
-        <div className="flex font-light items-center gap-6 ">
+        <div className="flex font-normal items-center gap-6 ">
           <Link
             to="/"
             className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all"

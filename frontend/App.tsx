@@ -9,6 +9,7 @@ import { OktoContextType, useOkto } from "okto-sdk-react";
 import BlackjackGame from "../games/blackjack";
 import SlotMachine from "../games/slotMachine";
 import { useEffect } from "react";
+import Error404Page from "./pages/Error404Page";
 
 function App() {
   // const { connected } = useWallet();
@@ -42,6 +43,7 @@ function App() {
               <Route path="/blackjack" element={<BlackjackGame />} />
               <Route path="slotmachine" element={<SlotMachine />} />
               <Route path="/sports" element={<Sports />} />
+              <Route path="/404" element={<Error404Page />} />
             </>
           ) : (
             <Route path="*" element={<AuthenticationPage />} />
