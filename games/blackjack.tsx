@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import NavBar from "../frontend/components/Navbar";
 import { Link } from "react-router-dom";
+import Navmini from "@/components/Navmini";
 
 // Type Definitions
 interface Card {
@@ -190,13 +191,8 @@ const BlackjackGame: React.FC = () => {
   return (
     <>
       <NavBar />
-      <div className="sm:hidden flex justify-between items-center p-4">
-        <Link to="/" className="text-white text-2xl font-semibold hover:text-stone-600">
-          <img className="h-auto w-48" src="../../public/logo.png" alt="Logo" />
-        </Link>
-        <button className="pb-2 font-semibold text-white">Logout</button>
-      </div>
-      <div className="min-h-screen text-white flex flex-col items-center justify-center p-4">
+      <Navmini />
+      <div className="min-h-screen text-white flex flex-col items-center justify-center p-4  overflow-hidden">
         <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">
           <div className="text-center mb-4">
             <h1 className="text-3xl font-bold">🃏Blackjack🃏</h1>
