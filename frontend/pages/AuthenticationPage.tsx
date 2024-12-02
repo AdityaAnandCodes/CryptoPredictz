@@ -116,7 +116,7 @@ const AuthenticationPage = () => {
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-green-600 hover:bg-green-700 rounded mt-4 text-center text-white font-semibold"
+                className="w-full py-3 bg-green-600 hover:bg-green-700 transition-all rounded mt-4 text-center text-white font-semibold"
               >
                 Get OTP
               </button>
@@ -124,10 +124,10 @@ const AuthenticationPage = () => {
           ) : (
             <form onSubmit={handleVerifyOTP}>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">OTP</label>
+                <label className="block text-lg font-medium mb-2">OTP</label>
                 <input
                   type="text"
-                  className="w-full p-3 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                  className="w-full p-3 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-green-500 transition-all"
                   placeholder="Enter the OTP"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
@@ -136,7 +136,7 @@ const AuthenticationPage = () => {
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-blue-600 hover:bg-blue-700 transition-all rounded mt-4 text-center text-white font-semibold"
+                className="w-full py-3 bg-green-600 hover:bg-green-700 transition-all rounded mt-4 text-center text-white font-semibold"
               >
                 Verify OTP
               </button>
