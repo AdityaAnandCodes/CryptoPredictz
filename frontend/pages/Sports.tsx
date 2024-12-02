@@ -24,7 +24,7 @@ const Sports = () => {
       The odds are in your favor! Place your bets and enjoy the thrill of the game.
     </p>
     <button className="bg-white text-purple-600 font-semibold px-6 max-sm:px-2 max-sm:text-base py-2 rounded-lg shadow-md hover:bg-gray-200 transition-all">
-      Start Betting Now
+      <a href="#bets">Start Betting Now</a>
     </button>
   </div>
 
@@ -50,7 +50,7 @@ const Sports = () => {
         <div className="md:col-span-4 p-2 bg-opacity-50 min-h-screen bg-black rounded-lg">
           
           {/* Search and Sort Bar */}
-          <div className="flex gap-3 max-sm:gap-0 sm:flex-row max-sm:flex-col max-sm:items-start mb-4 mt-16 max-sm:mt-4 max-sm:px-4  g-3">
+          <div id="bets" className="flex gap-3 max-sm:gap-0 sm:flex-row max-sm:flex-col max-sm:items-start mb-4 mt-16 max-sm:mt-4 max-sm:px-4  g-3">
             <input
               type="text"
               className="w-full sm:w-2/3 max-sm:w-full max-sm:mt-0 max-sm:mb-3 h-10 p-2 bg-gray-700 text-white rounded-lg"

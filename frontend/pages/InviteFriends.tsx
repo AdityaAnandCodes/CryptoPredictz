@@ -1,17 +1,28 @@
-import Navbar from '@/components/Navbar';
-import Navmini from '@/components/Navmini';
-
+import Navbar from "@/components/Navbar";
+import Navmini from "@/components/Navmini";
 
 const InviteFriends = () => {
-  
+  // Function to copy the invite link to the clipboard
+  const copyInviteLink = () => {
+    const inviteLink = "https://yourwebsite.com/invite"; // Replace with your actual invite link
+    navigator.clipboard
+      .writeText(inviteLink)
+      .then(() => {
+        alert("Invite link copied to clipboard!");
+      })
+      .catch((error) => {
+        console.error("Failed to copy link: ", error);
+        alert("Failed to copy the invite link.");
+      });
+  };
+
   return (
     <>
       <Navbar />
       <Navmini />
-      
       <div className="text-white min-h-screen flex flex-col items-center pt-24 pb-12 max-sm:pt-4 px-4">
         {/* Hero Section */}
-        <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between  bg-[url('/BlueGradient.png')] rounded-lg shadow-xl p-12 max-sm:p-4 mb-10 relative overflow-hidden">
+        <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between bg-[url('/BlueGradient.png')] rounded-lg shadow-xl p-12 max-sm:p-4 mb-10 relative overflow-hidden">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-extrabold leading-tight">
               Invite Friends and Get Rewarded
@@ -19,11 +30,13 @@ const InviteFriends = () => {
             <p className="text-lg font-medium text-gray-200 max-sm:mr-24">
               Earn exciting rewards by inviting your friends to join!
             </p>
-            <div className="mt-4 py-3 px-6 bg-purple-800 bg-opacity-50 text-white rounded-2xl hover:bg-purple-600 transition duration-300 w-fit">
+            <button
+              onClick={copyInviteLink}
+              className="mt-4 py-3 px-6 bg-purple-800 bg-opacity-50 text-white rounded-2xl hover:bg-purple-600 transition duration-300 w-fit"
+            >
               Invite Friends Here
-            </div>
+            </button>
           </div>
-         
           <img
             src="/inviteFriends.png"
             alt="Invite Friends"
@@ -43,7 +56,10 @@ const InviteFriends = () => {
               up and joins!
             </p>
             <div className="flex justify-center mb-6">
-              <button className="py-3 px-6 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300">
+              <button
+                onClick={copyInviteLink}
+                className="py-3 px-6 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300"
+              >
                 Copy Invite Link
               </button>
             </div>
