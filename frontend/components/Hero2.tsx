@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             <div className="text-4xl max-sm:text-3xl font-bold mt-5 ml-5 mr-9">Place Bet And Earn Money</div>
             <div className="text-lg max-sm:text-base px-5 font-semibold text-gray-100">Protected With Blockchain</div>
             <div className="bg-orange-700 ml-5 max-sm:text-sm text-base bg-opacity-50 rounded-lg w-fit p-2 px-4"><a href="/sports">
-              Place Bets</a>
+              See Prediction</a>
             </div>
           </div>
           <img src="/rb_3901.png" className="absolute bottom-2 right-2 w-40 h-40 max-sm:right-0" />
