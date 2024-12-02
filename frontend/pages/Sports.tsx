@@ -15,15 +15,8 @@ const Sports = () => {
     <>
       <Navbar />
       <Navmini />
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 py-4">
-        {/* Sidebar or aside */}
-        <div className="md:col-span-1 p-2 bg-black min-h-screen max-sm:min-h-fit bg-opacity-50 rounded-3xl">
-          <SportsList onSelectSport={setSelectedSport} />
-        </div>
-
-        {/* Main Content Section */}
-        <div className="md:col-span-4 p-2 bg-opacity-50 min-h-screen bg-black rounded-lg">
-          <div className="w-full h-60 max-sm:h-52 sportsHero rounded-2xl mt-16 max-sm:mt-0 flex justify-between p-4 px-12 max-sm:px-4 items-center  shadow-lg relative overflow-hidden">
+      <div className="p-4">
+      <div className="w-full h-60 max-sm:h-52 sportsHero rounded-2xl mt-16 max-sm:mt-0 flex justify-between p-4 px-12 max-sm:px-4 items-center  shadow-lg relative overflow-hidden">
   {/* Left Text Section */}
   <div className="text-white z-10 max-w-md">
     <h1 className="text-4xl max-sm:text-base font-bold mb-2">Bet on Your Favorite Sports</h1>
@@ -45,7 +38,17 @@ const Sports = () => {
   {/* Decorative Element */}
   <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-black/20 rounded-2xl"></div>
 </div>
+</div>
 
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 py-4">
+        {/* Sidebar or aside */}
+        <div className="md:col-span-1 p-2 bg-black min-h-screen max-sm:min-h-fit bg-opacity-50 rounded-3xl">
+          <SportsList onSelectSport={setSelectedSport} />
+        </div>
+
+        {/* Main Content Section */}
+        <div className="md:col-span-4 p-2 bg-opacity-50 min-h-screen bg-black rounded-lg">
+          
           {/* Search and Sort Bar */}
           <div className="flex gap-3 max-sm:gap-0 sm:flex-row max-sm:flex-col max-sm:items-start mb-4 mt-16 max-sm:mt-4 max-sm:px-4  g-3">
             <input
