@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+.roboto {
   font-family: "Roboto", sans-serif;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 *::-webkit-scrollbar {
@@ -30,24 +35,22 @@
   background-position: center;
 }
 
-.slotMachine{
-  background-image: url('/public/gambling-slot-machine-casino.jpg');
+.slotMachine {
+  background-image: url("/public/gambling-slot-machine-casino.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.blackJack{
-  background-image: url('/public/BlackJack1.jpg');
+.blackJack {
+  background-image: url("/public/BlackJack1.jpg");
   background-size: cover;
   background-position: center;
-
 }
 
-.sportsHero{
+.sportsHero {
   background-image: url("../public/PurpleGradient.png");
   background-size: cover;
   background-position: center;
-
 }
 
 @layer base {
