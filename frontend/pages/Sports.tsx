@@ -23,6 +23,29 @@ const Sports = () => {
 
         {/* Main Content Section */}
         <div className="md:col-span-4 p-2 bg-opacity-50 min-h-screen bg-black rounded-lg">
+          <div className="w-full h-60 max-sm:h-52 sportsHero rounded-2xl mt-16 max-sm:mt-0 flex justify-between p-4 px-12 max-sm:px-4 items-center  shadow-lg relative overflow-hidden">
+  {/* Left Text Section */}
+  <div className="text-white z-10 max-w-md">
+    <h1 className="text-4xl max-sm:text-base font-bold mb-2">Bet on Your Favorite Sports</h1>
+    <p className="text-lg max-sm:text-sm mb-4">
+      The odds are in your favor! Place your bets and enjoy the thrill of the game.
+    </p>
+    <button className="bg-white text-purple-600 font-semibold px-6 max-sm:px-2 max-sm:text-base py-2 rounded-lg shadow-md hover:bg-gray-200 transition-all">
+      Start Betting Now
+    </button>
+  </div>
+
+  {/* Right Image Section */}
+  <img
+    className="w-80 max-sm:w-40 h-auto z-10"
+    src="/public/Basketball.png"
+    alt="Basketball"
+  />
+
+  {/* Decorative Element */}
+  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-black/20 rounded-2xl"></div>
+</div>
+
           {/* Search and Sort Bar */}
           <div className="flex gap-3 max-sm:gap-0 sm:flex-row max-sm:flex-col max-sm:items-start mb-4 mt-16 max-sm:mt-4 max-sm:px-4  g-3">
             <input

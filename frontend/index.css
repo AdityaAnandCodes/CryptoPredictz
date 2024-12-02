@@ -43,6 +43,13 @@
 
 }
 
+.sportsHero{
+  background-image: url("../public/PurpleGradient.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
