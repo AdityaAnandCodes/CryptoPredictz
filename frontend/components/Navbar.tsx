@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { OktoContextType, useOkto } from "okto-sdk-react";
 import { Copy } from "lucide-react";
@@ -43,16 +43,24 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 w-full items-center text-white justify-between px-5 py-4 bg-zinc-950 hidden md:flex">
         {/* Logo */}
         <div>
-          <Link to="/" className="text-white text-2xl font-normal hover:text-stone-200 ">
-            <img className="h-auto w-44 hover:scale-105 duration-300 transition-all " src="../../public/logo.png" alt="" />
-          </Link>
+          <NavLink to="/" className="text-white text-2xl font-normal hover:text-stone-200 ">
+            <img
+              className="h-auto w-44 hover:scale-105 duration-300 transition-all "
+              src="../../public/logo.png"
+              alt=""
+            />
+          </NavLink>
         </div>
 
-        {/* Center Navigation Links */}
+        {/* Center Navigation NavLinks */}
         <div className="flex font-normal items-center gap-6 ">
-          <Link
+          <NavLink
             to="/"
-            className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all"
+            className={({ isActive }) =>
+              `flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all ${
+                isActive ? "underline underline-offset-4" : ""
+              }`
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,10 +78,14 @@ const Navbar = () => {
               <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             </svg>
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/sports"
-            className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all"
+            className={({ isActive }) =>
+              `flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all ${
+                isActive ? "underline underline-offset-4" : ""
+              }`
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,10 +107,14 @@ const Navbar = () => {
               <circle cx="12" cy="12" r="10" />
             </svg>
             Sports
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/reward"
-            className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all"
+            className={({ isActive }) =>
+              `flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all ${
+                isActive ? "underline underline-offset-4" : ""
+              }`
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,10 +133,14 @@ const Navbar = () => {
               <path d="M2 9h20" />
             </svg>
             Rewards
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/affiliate"
-            className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all"
+            className={({ isActive }) =>
+              `flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all ${
+                isActive ? "underline underline-offset-4" : ""
+              }`
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +161,7 @@ const Navbar = () => {
               <path d="M3 4h8" />
             </svg>
             Affiliate
-          </Link>
+          </NavLink>
         </div>
         <div className="flex items-center justify-center gap-6">
           <button
@@ -150,14 +170,17 @@ const Navbar = () => {
           >
             <Copy /> 0x...
           </button>
-          <button className="font-base hover:scale-95 hover:text-stone-200 duration-300  transition-all" onClick={logOut}>
+          <button
+            className="font-base hover:scale-95 hover:text-stone-200 duration-300  transition-all"
+            onClick={logOut}
+          >
             Logout
           </button>
           <button
             onClick={showWidgetModal}
             className="flex items-center text-base hover:text-stone-200 hover:scale-95 duration-200 transition-all"
           >
-            {/* <Link to="/account" className="flex items-center text-lg hover:text-stone-600"> */}
+            {/* <NavLink to="/account" className="flex items-center text-lg hover:text-stone-600"> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -175,7 +198,7 @@ const Navbar = () => {
               <circle cx="12" cy="12" r="10" />
             </svg>
             Account
-            {/* </Link> */}
+            {/* </NavLink> */}
           </button>
         </div>
       </nav>
@@ -186,7 +209,12 @@ const Navbar = () => {
       >
         <div className="bg-gray-100 flex gap-4 rounded-xl">
           <div className="flex justify-around gap-3 w-full max-w-md px-4 py-2">
-            <Link to="/" className="flex flex-col items-center text-center text-black">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `flex flex-col items-center text-center text-black ${isActive ? "underline decoration-black" : ""}`
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -203,8 +231,13 @@ const Navbar = () => {
                 <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               </svg>
               <span className="text-xs mt-1">Home</span>
-            </Link>
-            <Link to="/sports" className="flex flex-col items-center text-center text-black">
+            </NavLink>
+            <NavLink
+              to="/sports"
+              className={({ isActive }) =>
+                `flex flex-col items-center text-center text-black ${isActive ? "underline decoration-black" : ""}`
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -225,8 +258,13 @@ const Navbar = () => {
                 <circle cx="12" cy="12" r="10" />
               </svg>
               <span className="text-xs mt-1">Sports</span>
-            </Link>
-            <Link to="/reward" className="flex flex-col items-center text-center text-black">
+            </NavLink>
+            <NavLink
+              to="/reward"
+              className={({ isActive }) =>
+                `flex flex-col items-center text-center text-black ${isActive ? "underline decoration-black" : ""}`
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -244,8 +282,13 @@ const Navbar = () => {
                 <path d="M2 9h20" />
               </svg>
               <span className="text-xs mt-1">Rewards</span>
-            </Link>
-            <Link to="/affiliate" className="flex flex-col items-center text-center text-black">
+            </NavLink>
+            <NavLink
+              to="/affiliate"
+              className={({ isActive }) =>
+                `flex flex-col items-center text-center text-black ${isActive ? "underline decoration-black" : ""}`
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -265,12 +308,12 @@ const Navbar = () => {
                 <path d="M3 4h8" />
               </svg>
               <span className="text-xs mt-1">Affiliate</span>
-            </Link>
+            </NavLink>
             <button
               onClick={showWidgetModal}
               className="flex flex-col font-light text-base items-center text-center text-black"
             >
-              {/* <Link to="/account" className="flex flex-col items-center text-center text-black"> */}
+              {/* <NavLink to="/account" className="flex flex-col items-center text-center text-black"> */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -288,7 +331,7 @@ const Navbar = () => {
                 <circle cx="12" cy="12" r="10" />
               </svg>
               <span className="text-xs mt-1">Account</span>
-              {/* </Link> */}
+              {/* </NavLink> */}
             </button>
           </div>
         </div>
