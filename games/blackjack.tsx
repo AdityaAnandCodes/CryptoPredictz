@@ -199,7 +199,7 @@ const BlackjackGame: React.FC = () => {
       <div className="min-h-screen text-white flex flex-col items-center justify-center p-4">
         <div className=" rounded-xl p-6 w-full max-w-2xl shadow-md">
           <div className="text-center mb-4">
-            <h1 className="text-3xl font-bold">Blackjack</h1>
+            <h1 className="text-3xl font-bold">🃏Blackjack🃏</h1>
             <p>
               Balance: ${balance} | Current Bet: ${currentBet}
             </p>
@@ -230,7 +230,10 @@ const BlackjackGame: React.FC = () => {
                 >
                   <ChevronLeft />
                 </button>
-                <button onClick={placeBet} className="bg-white hover:bg-gray-100 text-black font-semibold text-xl px-6 py-2 rounded-full transition-all">
+                <button
+                  onClick={placeBet}
+                  className="bg-white hover:bg-gray-100 text-black font-semibold text-xl px-6 py-2 rounded-full transition-all"
+                >
                   ${currentBet}
                 </button>
                 <button

@@ -2,7 +2,7 @@ const Games = () => {
   return (
     <section id="Games" className="min-h-fit w-screen p-4 flex flex-col justify-center items-center gap-8">
       {/* Title Section */}
-      <div className="font-bold text-3xl">Casino Games</div>
+      <div className="font-bold text-3xl">💲Casino Games💲</div>
 
       {/* Game Sections */}
 
