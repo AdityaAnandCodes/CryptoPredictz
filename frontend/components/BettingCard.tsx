@@ -31,11 +31,11 @@ export default function BettingCard({ title, time, team1, team1Image, team2, tea
           <div className="flex flex-col items-start mb-3 gap-2">
             <div className="flex items-center space-x-4">
               <img src={team1Image} alt={team1} className="h-6 w-6 rounded-full" />
-              <span className="text-sm font-semibold text-slate-800">{team1}</span>
+              <span className="text-sm font-semibold text-gray-800">{team1}</span>
             </div>
             <div className="flex items-center space-x-4">
               <img src={team2Image} alt={team2} className="h-6 w-6 rounded-full" />
-              <span className="text-sm font-semibold text-slate-800">{team2}</span>
+              <span className="text-sm font-semibold text-gray-800">{team2}</span>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-2 text-center">
