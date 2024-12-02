@@ -1,6 +1,6 @@
 import { useOkto, type OktoContextType } from "okto-sdk-react";
 import { GoogleLogin } from "@react-oauth/google";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
 const AuthenticationPage = () => {
@@ -11,21 +11,19 @@ const AuthenticationPage = () => {
   const [authToken, setAuthToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const { sendEmailOTP, verifyEmailOTP, authenticate } = useOkto() as OktoContextType;
+  const ballsRef = useRef<HTMLDivElement[]>([]); // Store references to the balls
 
   useEffect(() => {
-    const balls = document.querySelectorAll(".ball");
-    if (balls.length) {
-      balls.forEach((ball) => {
-        gsap.to(ball, {
-          x: `+=${Math.random() * 400 - 200}`,
-          y: `+=${Math.random() * 400 - 200}`,
-          duration: Math.random() * 6 + 4,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
+    ballsRef.current.forEach((ball) => {
+      gsap.to(ball, {
+        x: `+=${Math.random() * 400 - 200}`,
+        y: `+=${Math.random() * 400 - 200}`,
+        duration: Math.random() * 6 + 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
       });
-    }
+    });
   }, []);
 
   const validateEmail = (email: string): boolean => {
@@ -80,6 +78,17 @@ const AuthenticationPage = () => {
       }
     });
   };
+
+  // Pre-calculate ball styles
+  const ballStyles = useRef(
+    [...Array(16)].map(() => ({
+      width: `${Math.random() * 20 + 50}px`,
+      height: `${Math.random() * 20 + 50}px`,
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      filter: "blur(12px)",
+    })),
+  );
 
   return (
     <section className="min-h-screen w-full relative overflow-hidden bg-gradient-to-b from-black via-black to-gray-950">
@@ -141,17 +150,12 @@ const AuthenticationPage = () => {
           </div>
         </div>
       </div>
-      {[...Array(16)].map((_, index) => (
+      {ballStyles.current.map((style, index) => (
         <div
           key={index}
           className="ball rounded-full bg-blue-950 opacity-50 absolute"
-          style={{
-            width: `${Math.random() * 20 + 50}px`,
-            height: `${Math.random() * 20 + 50}px`,
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            filter: "blur(12px)",
-          }}
+          style={style}
+          ref={(el) => el && (ballsRef.current[index] = el)}
         ></div>
       ))}
     </section>
