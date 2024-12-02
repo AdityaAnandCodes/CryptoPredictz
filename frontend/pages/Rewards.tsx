@@ -1,7 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Navmini from "@/components/Navmini";
 import { useEffect, useState } from "react";
-// import { OktoContextType, useOkto } from "okto-sdk-react";
+import { OktoContextType, useOkto } from "okto-sdk-react";
+import {
+  Account,
+  AccountAddress,
+  Aptos,
+  AptosConfig,
+  Ed25519PrivateKey,
+  Network,
+  PrivateKey,
+  PrivateKeyVariants,
+} from "@aptos-labs/ts-sdk";
 
 const getCurrentDate = () => {
   const today = new Date();
@@ -33,7 +43,9 @@ const updateLoginStreak = () => {
 const Rewards = () => {
   const [loginStreak, setLoginStreak] = useState<number>(0);
   const [reward, setReward] = useState<boolean>(false);
-  // const { logOut } = useOkto() as OktoContextType;
+  const { logOut, getWallets } = useOkto() as OktoContextType;
+  const config = new AptosConfig({ network: Network.TESTNET });
+  const aptos = new Aptos(config);
 
   useEffect(() => {
     const storedLogins = updateLoginStreak();
@@ -45,6 +57,32 @@ const Rewards = () => {
       setReward(true);
     }
   }, []);
+
+  const claimReward = async () => {
+    const formattedPrivateKey = PrivateKey.formatPrivateKey(
+      import.meta.env.VITE_MODULE_PUBLISHER_ACCOUNT_PRIVATE_KEY as string,
+      PrivateKeyVariants.Ed25519,
+    );
+
+    const privateKey = new Ed25519PrivateKey(formattedPrivateKey);
+    const account = Account.fromPrivateKey({ privateKey });
+    const wallets = await getWallets();
+    const transaction = await aptos.transaction.build.simple({
+      sender: account.accountAddress,
+      data: {
+        // The Move entry-function
+        function: "0x1::aptos_account::transfer",
+        functionArguments: [AccountAddress.fromString(wallets.wallets[0].address), 1000000],
+      },
+    });
+    const pendingTransaction = await aptos.signAndSubmitTransaction({
+      signer: account,
+      transaction,
+    });
+    const executedTransaction = await aptos.waitForTransaction({ transactionHash: pendingTransaction.hash });
+    console.log(executedTransaction);
+    localStorage.removeItem("loginStreak");
+  };
 
   return (
     <section className=" min-h-dvh text-white max-sm:pb-44">
@@ -71,9 +109,12 @@ const Rewards = () => {
           {reward ? (
             <div className="bg-green-600 p-6 rounded-lg text-center animate__animated animate__fadeIn">
               <h3 className="text-2xl font-semibold mb-4">Congratulations!</h3>
-              <p className="text-lg mb-4">You've logged in for 7 consecutive days and earned a ticket!</p>
-              <button className="py-2 px-6 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition duration-300">
-                Claim Your Ticket
+              <p className="text-lg mb-4">You've logged in for 7 consecutive days and earned 0.01 APT!</p>
+              <button
+                className="py-2 px-6 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition duration-300"
+                onClick={claimReward}
+              >
+                Claim Your Reward
               </button>
             </div>
           ) : (
@@ -104,9 +145,7 @@ const Rewards = () => {
         <div className="col-span-1 bg-gray-900 p-4 rounded-lg">
           <h3 className="text-xl font-semibold mb-4">Reward History</h3>
           <ul>
-            <li className="text-gray-300 mb-2">🎟️ 7-day streak - Ticket Earned (Nov 25, 2024)</li>
-            <li className="text-gray-300 mb-2">🎟️ 7-day streak - Ticket Earned (Nov 18, 2024)</li>
-            <li className="text-gray-300 mb-2">🎟️ 7-day streak - Ticket Earned (Nov 11, 2024)</li>
+            <li className="text-gray-300 mb-2">🎟️ 7-day streak - Ticket Earned (Dec 2, 2024)</li>
           </ul>
         </div>
       </div>
