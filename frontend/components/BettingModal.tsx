@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card"; // Assuming Card is imported from a UI component library
 
 interface BettingModalProps {
