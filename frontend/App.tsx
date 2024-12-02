@@ -41,7 +41,7 @@ function App() {
               <Route path="/reward" element={<Rewards />} />
               <Route path="/affiliate" element={<InviteFriends />} />
               <Route path="/blackjack" element={<BlackjackGame />} />
-              <Route path="slotmachine" element={<SlotMachine />} />
+              <Route path="/slotmachine" element={<SlotMachine />} />
               <Route path="/sports" element={<Sports />} />
               {/* <Route path="/404" element={<Error404Page />} /> */}
             </>
