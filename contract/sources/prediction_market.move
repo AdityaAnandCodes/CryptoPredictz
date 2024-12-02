@@ -67,7 +67,7 @@ module prediction_market::market {
         no_price: u64,
         timestamp: u64,
     }
-    public fun initialize_market(
+    public entry fun initialize_market(
         account: &signer,
         question: vector<u8>,
         end_time: u64,
@@ -122,7 +122,7 @@ module prediction_market::market {
         };
         move_to(account, market);
     }
-    public fun buy_prediction(
+    public entry fun buy_prediction(
         account: &signer,
         market_addr: address,
         is_yes: bool,
@@ -165,7 +165,7 @@ module prediction_market::market {
             },
         );
     }
-    public fun sell_prediction(
+    public entry fun sell_prediction(
         account: &signer,
         market_addr: address,
         is_yes: bool,
@@ -206,7 +206,7 @@ module prediction_market::market {
             },
         );
     }
-    public fun resolve(
+    public entry fun resolve(
         account: &signer,
         market_addr: address,
         outcome: u8,
@@ -226,7 +226,7 @@ module prediction_market::market {
             },
         );
     }
-    public fun claim_winnings(
+    public entry fun claim_winnings(
         account: &signer,
         market_addr: address,
     ) acquires Market, TokenCapabilities {
