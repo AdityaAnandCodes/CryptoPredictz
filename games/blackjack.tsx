@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import NavBar from "../frontend/components/Navbar";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Navmini from "@/components/Navmini";
 
 // Type Definitions

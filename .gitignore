@@ -35,4 +35,4 @@ pnpm-lock.yaml
 example-collection/
 .vercel
 
-.vercel
+matches.db

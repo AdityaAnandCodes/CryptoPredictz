@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Navmini from "@/components/Navmini";
-import React, { useEffect, useState } from "react";
-import { OktoContextType, useOkto } from "okto-sdk-react";
+import { useEffect, useState } from "react";
+// import { OktoContextType, useOkto } from "okto-sdk-react";
 
 const getCurrentDate = () => {
   const today = new Date();
@@ -33,7 +33,7 @@ const updateLoginStreak = () => {
 const Rewards = () => {
   const [loginStreak, setLoginStreak] = useState<number>(0);
   const [reward, setReward] = useState<boolean>(false);
-  const { logOut } = useOkto() as OktoContextType;
+  // const { logOut } = useOkto() as OktoContextType;
 
   useEffect(() => {
     const storedLogins = updateLoginStreak();

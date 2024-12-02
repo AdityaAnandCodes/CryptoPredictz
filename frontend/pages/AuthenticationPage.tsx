@@ -9,7 +9,6 @@ const AuthenticationPage = () => {
   const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [otpToken, setOtpToken] = useState<string | null>(null);
-  const [authToken, setAuthToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const { sendEmailOTP, verifyEmailOTP, authenticate } = useOkto() as OktoContextType;
   const ballsRef = useRef<HTMLDivElement[]>([]);
@@ -75,7 +74,7 @@ const AuthenticationPage = () => {
     const idToken = credentialResponse.credential;
     authenticate(idToken, (authResponse, error) => {
       if (authResponse) {
-        setAuthToken(authResponse.auth_token);
+        // Here you can use the authResponse.auth_token for future requests if needed
         navigate("/"); // Redirect to the home page
       } else if (error) {
         console.error("Authentication error:", error);
