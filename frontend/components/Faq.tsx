@@ -52,7 +52,9 @@ const Faq: React.FC = () => {
               <h3 className="text-lg font-semibold">{faq.question}</h3>
               <svg
                 className={`w-6 h-6 transition-transform duration-300 ${
-                  openIndex === index ? "transform rotate-180 animate-pulse animation-slow duration-300 transition-all" : ""
+                  openIndex === index
+                    ? "transform rotate-180 animate-pulse animation-slow duration-1000 transition-all"
+                    : ""
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
